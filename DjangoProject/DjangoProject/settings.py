@@ -64,7 +64,7 @@ DATABASES = {
     },
     'mongodb': {
         'ENGINE': 'django_mongokit.mongodb',
-        'NAME': 'ves-dev',
+        'NAME': 'test',
         'USER': '',
         'PASSWORD': '',
         'HOST': '',

@@ -8,4 +8,7 @@ urlpatterns = patterns('',
     # url(r'^blog/', include('blog.urls')),
     url(r'^$', landing_page, name='landing_page'),
     (r'^academic',include('DjangoProject.App.urls.academic_record')),
+    (r'^user',include('DjangoProject.App.urls.user')),
+    (r'^prouser',include('DjangoProject.App.urls.prouser')),
+
    )

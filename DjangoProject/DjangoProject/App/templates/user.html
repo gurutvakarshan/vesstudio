@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<script
+			  src="https://code.jquery.com/jquery-1.12.4.min.js"
+			  integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ="
+			  crossorigin="anonymous"></script>
+	
+	<script type="text/javascript">
+		$.ajax({
+			method : "POST",
+			url : "/user/",
+			data : {"name":name},
+			cache : false,
+		    csrfmiddlewaretoken: {{csrf_token}}
+			})
+			.done(function(){
+			alert("done");
+		});
+		// fmt.fail(function( jqXHR, textStatus ) {
+  // 		alert( "Request failed: " + textStatus );
+		// });
+	</script>
+</head>
+<body>
+	<form method="POST">{% csrf_token %}
+		<input type="text" name="name" id="name">
+		<input type="submit" name="submit" value="submit">
+	</form>
+
+
+		{% for each in user_data %}
+			{{each}}
+		{% endfor %}
+	
+</body>
+</html>
