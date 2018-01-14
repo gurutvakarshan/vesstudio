@@ -4,10 +4,10 @@ from django.template import loader
 from django.template import RequestContext
 from DjangoProject.App.models import *
 
-
 def User(request):
-    name = request.POST.get('name')
+    name = request.GET.get("nm")
     print name
+    sur  = "mokal"
     user_collection = connection.test.user.User()
     name = user_collection['name'] 
     # user_collection.save()
@@ -15,12 +15,12 @@ def User(request):
     for each in user_data:
     	print each
 
-    	template = "user.html"
- #    	variable = RequestContext(request, {'user_data': user_data})
-	# return render_to_response(template, variable)
-	return render(request,template)
-
+    return render_to_response('user.html', {'sur': sur}, context_instance=RequestContext(request))
+	# return render_to_response(variable, template)
+	# return render(request,template)
 # def data(request):
 # 	user_data = connection.test.user.User.find()
 # 	return render_to_response(request,'data.html',{'user_data':user_data})
 
+def data(request):
+	return HttpResponse("ok")

@@ -2,37 +2,89 @@
 <html>
 <head>
 	<title></title>
-	<script
-			  src="https://code.jquery.com/jquery-1.12.4.min.js"
-			  integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ="
-			  crossorigin="anonymous"></script>
+	<!-- foundation-sites from bower -->
+	<!-- <script  src="/static/bower_components/jquery/dist/jquery.min.js"></script> -->
+	<!-- <script type="text/javascript" src="/static/bower_components/foundation-sites/dist/js/foundation.min.js"></script> -->
+	<!-- <link rel="stylesheet" type="text/css" href="/static/bower_components/foundation-sites/dist/css/foundation.min.css"> -->
+	<!-- //////////////////////////////////////////////////////////////////////////////////////////////////////  -->
+	<!-- csrfmiddlewaretoken: {{csrf_token}} --> 
 	
-	<script type="text/javascript">
-		$.ajax({
-			method : "POST",
-			url : "/user/",
-			data : {"name":name},
-			cache : false,
-		    csrfmiddlewaretoken: {{csrf_token}}
-			})
-			.done(function(){
-			alert("done");
-		});
-		// fmt.fail(function( jqXHR, textStatus ) {
-  // 		alert( "Request failed: " + textStatus );
-		// });
-	</script>
+	<!-- ////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+	<!-- foundation-sites from cdn -->
+	<!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script> -->
+	<!-- <script src="https://cdn.jsdelivr.net/foundation/6.2.4/foundation.min.js"></script> -->
+    <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/foundation/6.2.4/foundation.min.css">  -->
+    <!-- //////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+    <!-- event.preventDefault(); -->
+
+    <link rel="stylesheet" type="text/css" href="/static/bower_components/semantic/dist/semantic.min.css">
+    <script type="text/javascript" src="/static/bower_components/jquery/dist/jquery.min.js"></script>
+    <script type="text/javascript" src="/static/bower_components/semantic/dist/semantic.min.js"></script>
+
+
+ 	<script type="text/javascript">
+				function a(){	
+ 					var b = "ashutosh"; 
+ 					var c = "{{sur}}";
+ 					alert(c);
+ 					alert(b);
+				// 		if(c == String(b)){
+				// 			alert("hello");
+				// 		}
+				// 		else {
+				// 			alert("go home");
+				// 		}						
+				}
+				a()
+				//
+			</script>
 </head>
 <body>
-	<form method="POST">{% csrf_token %}
-		<input type="text" name="name" id="name">
-		<input type="submit" name="submit" value="submit">
-	</form>
-
-
-		{% for each in user_data %}
-			{{each}}
-		{% endfor %}
 	
+<form>
+
+  	<div class="grid-x grid-padding-x" class="column">
+    	<div class="large-8 columns">
+      		<label for="middle-label" class="text-right middle">Label1</label>
+    	</div>
+    	<div class="medium-3 cell">
+      		<input type="text" id="middle-label" placeholder="Right- and middle-aligned text input">
+    	</div>
+   	</div>
+
+   	<div class="grid-x grid-padding-x" class="column">
+  		<div class="large-8 columns">
+      		<label for="middle-label" class="text-right middle">Label2</label>
+    	</div>
+    	<div class="medium-3 cell">
+      		<input type="text" id="middle-label" placeholder="Right- and middle-aligned text input">
+    	</div>
+  	<div>
+</form>
+
+<div class="row">
+  	<div class="small-8 columns">8
+    	<div class="row">
+      		<div class="small-8 columns">8 Nested
+        		<div class="row">
+          			<div class="small-8 columns">8 Nested Again</div>
+          			<div class="small-4 columns">4</div>
+        		</div>
+      		</div>
+      		<div class="small-4 columns">4</div>
+    	</div>
+  	</div>
+  		<div class="small-4 columns">4</div>
+</div>
+
+
+	<!-- 	{% for each in user_data %}
+			{{each}}
+		{% endfor %} -->
+
 </body>
+{% block script %}
+
+{% endblock %}
 </html>
+

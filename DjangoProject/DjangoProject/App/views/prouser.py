@@ -11,7 +11,7 @@ def ProUser(request):
     prouser_collection = connection.test.prouser.ProfessionalUser()
     prouser_collection['name'] = name
     prouser_collection['activity'] = activity
-    # prouser_collection.save()
+    prouser_collection.save()
     user_data = connection.test.prouser.ProfessionalUser.find()
     for each in user_data:
     	print each
