@@ -7,4 +7,8 @@ urlpatterns = patterns('DjangoProject.App.views.user',
 
     url(r'^[/]$','User',name='User'),
     url(r'^/data/$','data',name='data'),
+    url(r'^/retrive/$','retrive',name='retrive'),
+   	url(r'^/showimg/$','showimg',name='showimg'),
+   	   	# url(r'^/iterimg/$','iterimg',name='iterimg'),
+
 )

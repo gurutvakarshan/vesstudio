@@ -6,12 +6,11 @@ from django.contrib.auth import authenticate, login,logout
 from django.core.mail import EmailMessage
 
 def registration(request):
-	sur = "mokal"
-	if request.method =="POST":
-        role = request.POST.get("role")
-        first_name = request.POST.get("first-name")
-        last_name = request.POST.get("last-name")
-        klass = request.POST.get("klass")
+	if request.method== "POST":
+    	role = request.POST.get("role")
+    	first_name = request.POST.get("first-name")
+    	last_name = request.POST.get("last-name")
+    	klass = request.POST.get("klass")
         roll_number = request.POST.get("roll-number")
         birth_date = request.POST.get("birth-date")
         telephone_number = request.POST.get("telephone-number")
@@ -31,12 +30,44 @@ def registration(request):
     	user_member_reg['telephone_number'] = telephone_number
     	user_member_reg['mobile_number'] = mobile_number
     	user_member_reg['address'] = address
-    	user_member_reg['activity'] = activity
+    	# user_member_reg['activity'] = activity
     	user_member_reg['email'] = email
     	user_member_reg['password'] = password
     	user_member_reg.save()
     	activation_email(request,email)
-    	return HttpResponseRedirect("/success_register_activation_mail_sent")
+    return HttpResponseRedirect("/success_register_activation_mail_sent")
+
+def adminjuryreg(request):
+	if request.method== "POST":
+    	role = request.POST.get("role")
+    	first_name = request.POST.get("first-name")
+    	last_name = request.POST.get("last-name")
+    	klass = request.POST.get("klass")
+        roll_number = request.POST.get("roll-number")
+        birth_date = request.POST.get("birth-date")
+        # telephone_number = request.POST.get("telephone-number")
+        mobile_number = request.POST.get("mobile-number")
+        address = request.POST.get("address")
+        activity = request.POST.get("activity")
+        email = request.POST.get("email")
+        password = request.POST.get("password")
+
+        user_member_reg = connection.ves_dev.admins_juries_reg.Admin_Jury_Member_Reg()
+    	user_member_reg['role'] = role
+    	user_member_reg['first_name'] = first_name
+    	user_member_reg['last_name'] = last_name
+    	user_member_reg['klass'] = klass
+    	user_member_reg['roll_number'] = roll_number
+    	user_member_reg['birth_date'] = birth_date
+    	# user_member_reg['telephone_number'] = telephone_number
+    	user_member_reg['mobile_number'] = mobile_number
+    	user_member_reg['address'] = address
+    	# user_member_reg['activity'] = activity
+    	user_member_reg['email'] = email
+    	user_member_reg['password'] = password
+    	user_member_reg.save()
+    	activation_email(request,email)
+    return HttpResponseRedirect("/success_register_activation_mail_sent")
 
 def member_login(request):
 	if request.method =="POST":
@@ -48,9 +79,9 @@ def member_login(request):
    			member = authenticate(request,email=email,password=password)
    			if member is not None:
    				login(request,member)
-   				HttpResponseRedirect("/homepage")
+   				return HttpResponseRedirect("/homepage")
    			else:
-   				HttpResponseRedirect("/invalid")
+   				return HttpResponseRedirect("/invalid")
 
 def member_logout(request):
 	logout(request)

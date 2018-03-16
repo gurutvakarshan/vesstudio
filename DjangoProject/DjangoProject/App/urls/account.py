@@ -6,6 +6,7 @@ urlpatterns = patterns('DjangoProject.App.views.account',
     # url(r'^blog/', include('blog.urls')),
 
     url(r'^[/]$','registration',name='registration'),
+    url(r'^create_account/admin_jury_reg/$','adminjuryreg',name='adminjuryreg'),
     url(r'^/login/$','member_login',name='member_login'),
     url(r'^logout/$','member_logout',name='member_logout'),
     url(r'^activation/complete$','activation',name='activation'),

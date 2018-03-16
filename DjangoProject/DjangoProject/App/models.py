@@ -5,6 +5,18 @@ import datetime
 connection = Connection()
 
 @connection.register
+class StoreLargeFiles(Document):
+    __database__ = "test2"
+    __collection__ = "largefiles"
+    structure = {
+        "title" : unicode,
+    }
+    gridfs = {
+        'files': ['source','template'],
+        'containers':['images'],
+    }
+
+@connection.register
 class User(Document):
     __database__ = "tutorial"
     __collection__ = "users"
@@ -48,7 +60,7 @@ class UserMemberReg(DjangoDocument):
     default_values = {'date_creation':datetime.datetime.utcnow}
 
 @connection.register
-class admin_jury_member_reg(user_member_reg):
+class Admin_Jury_Member_Reg(UserMemberReg):
     __database__ = 'ves_dev'
     __collection__ = 'admins_juries_reg'
     structure = {
@@ -59,7 +71,7 @@ class admin_jury_member_reg(user_member_reg):
     default_values = {}
 
 @connection.register
-class scheduled(DjangoDocument):
+class Scheduled(DjangoDocument):
     __database__ ='ves_dev'
     __collection__ = 'scheduleds'
     structure = {
@@ -77,7 +89,7 @@ class scheduled(DjangoDocument):
     default_values = { 'date_creation':datetime.datetime.utcnow}
 
 @connection.register
-class category(DjangoDocument):
+class Category(DjangoDocument):
     __database__ = 'ves_dev'
     __collection__ = 'categories'
     structure = {
@@ -90,7 +102,7 @@ class category(DjangoDocument):
     default_values = {}
 
 @connection.register
-class subcategory(DjangoDocument):
+class Subcategory(DjangoDocument):
     __database__ = 'ves_dev'
     __collection__ = 'subcategories'
     structure = {
@@ -103,7 +115,7 @@ class subcategory(DjangoDocument):
     default_values = {}
 
 @connection.register
-class klass(DjangoDocument):
+class Klass(DjangoDocument):
     __database__ = 'ves_dev'
     __collection__ = 'klasses'
     structure = {
@@ -116,7 +128,7 @@ class klass(DjangoDocument):
     default_values = {}
 
 @connection.register
-class level1(DjangoDocument):
+class Level1(DjangoDocument):
     __database__ = 'ves_dev'
     __collection__ = 'levels1'
     structure = {
@@ -133,7 +145,7 @@ class level1(DjangoDocument):
     default_values = {'date_creation':datetime.datetime.utcnow}
 
 @connection.register
-class level2(DjangoDocument):
+class Level2(DjangoDocument):
     __database__  = 'ves_dev'
     __collection__ = 'levels2'
     structure = {
@@ -149,7 +161,7 @@ class level2(DjangoDocument):
     default_values = {'date_creation':datetime.datetime.utcnow}
 
 @connection.register
-class level3(DjangoDocument):
+class Level3(DjangoDocument):
     __database__  = 'ves_dev'
     __collection__ = 'levels3'
     structure = {
@@ -166,7 +178,7 @@ class level3(DjangoDocument):
 
 
 @connection.register
-class level4(DjangoDocument):
+class Level4(DjangoDocument):
     __database__  = 'ves_dev'
     __collection__ = 'levels4'
     structure = {
@@ -183,7 +195,7 @@ class level4(DjangoDocument):
 
 
 @connection.register
-class level5(DjangoDocument):
+class Level5(DjangoDocument):
     __database__  = 'ves_dev'
     __collection__ = 'levels5'
     structure = {
@@ -201,7 +213,7 @@ class level5(DjangoDocument):
 
 
 @connection.register
-class level6(DjangoDocument):
+class Level6(DjangoDocument):
     __database__ = 'ves_dev'
     __collection__ = 'levels6'
     structure = {
@@ -217,5 +229,8 @@ class level6(DjangoDocument):
     required_fields = ['nss','rotract_club','llle','acp','others']
     default_values = {"date_creation":datetime.datetime.utcnow}
 
+# from django import forms
 
-
+# class UploadFileForm(forms.Form):
+#     title = forms.CharField(max_length=50)
+#     file = forms.FileField()

@@ -20,71 +20,23 @@
     <link rel="stylesheet" type="text/css" href="/static/bower_components/semantic/dist/semantic.min.css">
     <script type="text/javascript" src="/static/bower_components/jquery/dist/jquery.min.js"></script>
     <script type="text/javascript" src="/static/bower_components/semantic/dist/semantic.min.js"></script>
-
-
- 	<script type="text/javascript">
-				function a(){	
- 					var b = "ashutosh"; 
- 					var c = "{{sur}}";
- 					alert(c);
- 					alert(b);
-				// 		if(c == String(b)){
-				// 			alert("hello");
-				// 		}
-				// 		else {
-				// 			alert("go home");
-				// 		}						
-				}
-				a()
-				//
-			</script>
 </head>
 <body>
-	
-<form>
-
-  	<div class="grid-x grid-padding-x" class="column">
-    	<div class="large-8 columns">
-      		<label for="middle-label" class="text-right middle">Label1</label>
-    	</div>
-    	<div class="medium-3 cell">
-      		<input type="text" id="middle-label" placeholder="Right- and middle-aligned text input">
-    	</div>
-   	</div>
-
-   	<div class="grid-x grid-padding-x" class="column">
-  		<div class="large-8 columns">
-      		<label for="middle-label" class="text-right middle">Label2</label>
-    	</div>
-    	<div class="medium-3 cell">
-      		<input type="text" id="middle-label" placeholder="Right- and middle-aligned text input">
-    	</div>
-  	<div>
-</form>
-
-<div class="row">
-  	<div class="small-8 columns">8
-    	<div class="row">
-      		<div class="small-8 columns">8 Nested
-        		<div class="row">
-          			<div class="small-8 columns">8 Nested Again</div>
-          			<div class="small-4 columns">4</div>
-        		</div>
-      		</div>
-      		<div class="small-4 columns">4</div>
-    	</div>
-  	</div>
-  		<div class="small-4 columns">4</div>
+	<form method="POST" enctype="multipart/form-data">{% csrf_token %}
+							<div>
+    <label for="file" class="ui icon button">
+        <i class="file icon"></i>
+        Open File</label>
+    <input type="file" id="file" name ="file" style="display:none">
+    <input class="ui button" type="submit" value="Submit">
 </div>
+	</form>
+	<!-- {{form}}	 -->
 
-
-	<!-- 	{% for each in user_data %}
-			{{each}}
-		{% endfor %} -->
-
+<!-- 	<form method="POST"  enctype="multipart/form-data">{% csrf_token %}
+	<input type="file"  name='file'> 
+    <input type="submit" value="Submit">
+</form> -->
 </body>
-{% block script %}
-
-{% endblock %}
 </html>
 

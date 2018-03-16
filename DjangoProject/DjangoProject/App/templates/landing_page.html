@@ -14,13 +14,13 @@
   <div class="top-bar-left">
     <ul class="dropdown menu" data-dropdown-menu>
       	<li class="menu-text" class="small-12 columns">Site Title</li>
-      	{% url 'academic' as academic_url %}	
+    {% url 'academic' as academic_url %}	
      	<li><a href="{{academic_url}}">Academic</a></li>
-     	{% url 'User' as user_url %}
+    {% url 'User' as user_url %}
 		<li><a href="{{user_url}}">User</a></li>
-		{% url 'ProUser' as prouser_url %}
+	{% url 'ProUser' as prouser_url %}
 		<li><a href="{{prouser_url}}">ProUser</a></li>
-		{% url 'registration' as account_url %}
+	{% url 'registration' as account_url %}
 		<li><a href="{{account_url}}">Account</a></li>
     </ul>
   </div>
