@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<link rel="stylesheet" type="text/css" href="/static/bower_components/semantic/dist/semantic.min.css">
+	<script type="text/javascript" src="/static/bower_components/jquery/dist/jquery.min.js"></script>
+	<script type="text/javascript" src="/static/bower_components/semantic/dist/semantic.min.js"></script>
+</head>
+<body>
+<div class="ui grid">
+ 	<div class="two column centered grid large screen only row">
+		<div class="column">
+	  		<div class="ui segment">
+		   		<div class="content">
+					<div class="header">Level 4</div>
+				</div>
+				<div class="ui divider"></div>
+				<div class="content">   
+					<form class="ui form">				
+  						<div class="field">
+   							<label>Selected Sucategory</label>
+   							<select class="ui search dropdown" name="selected-subcat">
+      						<option value="">{{db}}</option>
+      						</select>
+      					</div>
+      					<div class="ui divider"></div>
+						<div class="field">
+							<label>Year</label> <!-- calender -->
+							<input name="year" placeholder="Year" type="text">
+						</div>
+						<div class="ui divider"></div>
+						<div class="field">
+							<label>Event</label>
+							<input name="event" placeholder="Event" type="text">
+						</div>
+						<div class="ui divider"></div>
+						<div class="field">
+    						<label>Description</label>
+    						<textarea rows="2"></textarea>
+  						</div>
+  						<div class="ui divider"></div>
+					</form>
+				</div>
+				<div class="extra content">
+					<button class="ui centered button">Submit</button>
+				</div>      
+			</div>
+		</div>
+  	</div>
+</div>
+<!--login -->
+<!-- <div class="ui center aligned basic segment">
+  <div class="ui left icon action input">
+    <i class="search icon"></i>
+    <input placeholder="Order #" type="text">
+    <div class="ui blue submit button">Search</div>
+  </div>
+  <div class="ui horizontal divider">
+    Or
+  </div>
+  <div class="ui teal labeled icon button">
+    Create New Order
+    <i class="add icon"></i>
+  </div>
+</div> -->
+<!-- <div class="two column stackable ui grid">
+  <div class="column">
+	<div class="ui segment">
+	  <p></p>
+	  <p></p>
+	</div>
+  </div>
+  <div class="column">
+	<div class="ui segment">
+	  <p></p>
+	  <p></p>
+	</div>
+  </div>
+</div> -->
+</body>
+</html>

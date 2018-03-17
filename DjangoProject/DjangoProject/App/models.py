@@ -210,8 +210,6 @@ class Level5(DjangoDocument):
     required_fields = ['selected_subcat','year','achievement','description']
     default_values = {'date_creation':datetime.datetime.utcnow}
 
-
-
 @connection.register
 class Level6(DjangoDocument):
     __database__ = 'ves_dev'
