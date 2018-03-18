@@ -12,5 +12,5 @@ urlpatterns = patterns('',
     (r'^academic',include('DjangoProject.App.urls.academic_record')),
     (r'^user',include('DjangoProject.App.urls.user')),
     (r'^prouser',include('DjangoProject.App.urls.prouser')),
-
+    (r'^forms',include('DjangoProject.App.urls.forms')),
    )
