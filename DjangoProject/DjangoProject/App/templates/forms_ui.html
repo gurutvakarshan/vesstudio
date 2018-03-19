@@ -5,30 +5,43 @@
 	<link rel="stylesheet" type="text/css" href="/static/bower_components/semantic/dist/semantic.min.css">
 	<script type="text/javascript" src="/static/bower_components/jquery/dist/jquery.min.js"></script>
 	<script type="text/javascript" src="/static/bower_components/semantic/dist/semantic.min.js"></script>
+	<!-- Ajax to add different links to same page -->	
+	<script type="text/javascript">
+		$(document).ready(function(){
+			$('#level1').click(function(){
+			
+			// $(this).removeClass('activate');			
+			$(this).state('activate');
+			// $(this).state();
+			// $(this).addClass('activate');	
+		
+			});
+		});
+	</script>
 </head>
 <body>
 	<div class="ui grid">
   		<div class="four wide column">
     		<div class="ui vertical fluid tabular menu">
     			{% url 'level1' as level1_url %}
-      			<a href="{{level1_url}}" class="active item" name="level1">Academic</a>
+      			<a href="{{level1_url}}" class="item" name="level1" id="level1">Academic</a>
       			{% url 'level2' as level2_url %}
-      			<a class="item" name="level2">Co-Curricular</a>
+      			<a href="{{level2_url}}" class="item" name="level2" id="level2">Co-Curricular</a>
       			{% url 'level3' as level3_url %}
-      			<a class="item" name="level3">Extra-Curricular</a>
+      			<a href="{{level3_url}}" class="item" name="level3" id="level3">Extra-Curricular</a>
       			{% url 'level4' as level4_url %}
-      			<a class="item" name="level4">Sports</a>
+      			<a href="{{level4_url}}" class="item" name="level4" id="level4">Sports</a>
       			{% url 'level5' as level5_url %}
-      			<a class="item" name="level5">Others</a>
+      			<a href="{{level5_url}}" class="item" name="level5" id="level5">Others</a>
       			{% url 'level6' as level6_url %}
-      			<a class="item" name="level6">Enrolled In</a>
+      			<a href="{{level6_url}}" class="item" name="level6" id="level6">Enrolled In</a>
     		</div>
   		</div>
-  		<div class="twelve wide stretched column">
-    		<div class="ui segment">
-    			<!-- ? -->
+<!--   		<div class="twelve wide stretched column">
+    		<div class="ui segment" id="append_level1">
+    			
     		</div>
-  		</div>
+  		</div> -->
 	</div>
 </body>
 </html>
