@@ -5,12 +5,15 @@
 <!-- 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 	<script src="https://cdn.jsdelivr.net/foundation/6.2.4/foundation.min.js"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/foundation/6.2.4/foundation.min.css">  -->
-    <script  src="/static/bower_components/jquery/dist/jquery.min.js"></script> <!-- worked -->
+    <!-- <script  src="/static/bower_components/jquery/dist/jquery.min.js"></script>
 	<script type="text/javascript" src="/static/bower_components/foundation-sites/dist/js/foundation.min.js"></script>
-	<link rel="stylesheet" type="text/css" href="/static/bower_components/foundation-sites/dist/css/foundation.min.css">
+	<link rel="stylesheet" type="text/css" href="/static/bower_components/foundation-sites/dist/css/foundation.min.css"> -->
+	<link rel="stylesheet" type="text/css" href="/static/bower_components/semantic/dist/semantic.min.css">
+	<script type="text/javascript" src="/static/bower_components/jquery/dist/jquery.min.js"></script>
+	<script type="text/javascript" src="/static/bower_components/semantic/dist/semantic.min.js"></script>
 </head>
 <body>
-<div class="top-bar">
+<!-- <div class="top-bar">
   <div class="top-bar-left">
     <ul class="dropdown menu" data-dropdown-menu>
       	<li class="menu-text" class="small-12 columns">Site Title</li>
@@ -25,7 +28,7 @@
 	{% url 'forms' as forms_url %}
 		<li><a href="{{forms_url}}">Forms</a></li>
     </ul>
-  </div>
+  </div> 
 
   <div class="top-bar-right">
     <ul class="menu">
@@ -33,6 +36,21 @@
       <li><button type="button" class="button">Search</button></li>
     </ul>
   </div>
+</div> -->
+
+<!-- <div class="ui container"> -->
+<div class="ui massive fluid compact menu">
+	{% url 'academic' as academic_url %}
+		<a href="{{academic_url}}" class="item"><i class="home icon"></i>Academic</a>
+  	{% url 'User' as user_url %}
+  		<a href="{{user_url}}" class="item">User</a>
+  	{% url 'ProUser' as prouser_url %}
+  		<a href="{{prouser_url}}" class="item">ProUser</a>
+  	{% url 'registration' as account_url %}
+  		<a href="{{account_url}}" class="item">Account</a>
+  	{% url 'forms' as forms_url %}
+  		<a href="{{forms_url}}" class="item"><i class="wpforms icon"></i>Forms</a>
 </div>
+<!-- </div> -->
 </body>
 </html>

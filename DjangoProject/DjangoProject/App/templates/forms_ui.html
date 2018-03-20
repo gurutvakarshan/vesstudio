@@ -1,26 +1,19 @@
 <!DOCTYPE html>
 <html>
 <head>
+	{% include 'landing_page.html' %}
 	<title></title>
 	<link rel="stylesheet" type="text/css" href="/static/bower_components/semantic/dist/semantic.min.css">
 	<script type="text/javascript" src="/static/bower_components/jquery/dist/jquery.min.js"></script>
 	<script type="text/javascript" src="/static/bower_components/semantic/dist/semantic.min.js"></script>
 	<!-- Ajax to add different links to same page -->	
-	<script type="text/javascript">
-		$(document).ready(function(){
-			$('#level1').click(function(){
-			
-			// $(this).removeClass('activate');			
-			$(this).state('activate');
-			// $(this).state();
-			// $(this).addClass('activate');	
-		
-			});
-		});
+	<script>
+	$('.item')
+    .state('active');
 	</script>
 </head>
 <body>
-	<div class="ui grid">
+<!-- 	<div class="ui grid">
   		<div class="four wide column">
     		<div class="ui vertical fluid tabular menu">
     			{% url 'level1' as level1_url %}
@@ -37,11 +30,28 @@
       			<a href="{{level6_url}}" class="item" name="level6" id="level6">Enrolled In</a>
     		</div>
   		</div>
-<!--   		<div class="twelve wide stretched column">
-    		<div class="ui segment" id="append_level1">
-    			
-    		</div>
-  		</div> -->
-	</div>
+	</div> -->
+<div class="ui three column divided grid">
+  	<div class="stretched row">
+    <!-- <div class="column"> -->
+    	<div class="ui container">	
+    		<div class="ui vertical pointing menu">
+    		{% url 'level1' as level1_url %}	
+  				<a href="{{level1_url}}" class="item">Academic</a>
+  			{% url 'level2' as level2_url %}
+  				<a href="{{level2_url}}" class="item">Co-Curricular</a>
+  			{% url 'level3' as level3_url %}
+  				<a href="{{level3_url}}" class="item ">Extra-Curricular</a>
+  			{% url 'level4' as level4_url %}
+  				<a href="{{level4_url}}" class="item ">Sports</a>
+  			{% url 'level5' as level5_url %}	
+  				<a href="{{level5_url}}" class="item ">Others</a>
+  			{% url 'level6' as level6_url %}
+  				<a href="{{level6_url}}" class="item ">Enrolled In</a>
+			</div>
+	<!-- </div> -->
+    	</div>
+  	</div>
+</div>
 </body>
 </html>
