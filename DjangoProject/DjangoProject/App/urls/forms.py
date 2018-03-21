@@ -6,7 +6,7 @@ urlpatterns = patterns('DjangoProject.App.views.forms',
     # url(r'^blog/', include('blog.urls')),
 
     url(r'^/$','forms',name='forms'),
-    url(r'^activities/fill_marks/academic/$','level1',name='level1'),
+    url(r'^/activities/fill_marks/academic/$','level1',name='level1'),
     url(r'^/activities/fill_marks/co_curricular/$','level2',name='level2'),
     url(r'^/activities/fill_marks/extra_curricular/$','level3',name='level3'),
     url(r'^/activities/fill_marks/sports/$','level4',name='level4'),

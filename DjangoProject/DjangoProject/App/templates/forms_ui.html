@@ -31,13 +31,13 @@
     		</div>
   		</div>
 	</div> -->
+<div class="ui grid">
 <div class="ui three column divided grid">
-  	<div class="stretched row">
-    <!-- <div class="column"> -->
+  	<div class="row">
     	<div class="ui container">	
-    		<div class="ui vertical pointing menu">
+    		<div class="ui pointing menu">
     		{% url 'level1' as level1_url %}	
-  				<a href="{{level1_url}}" class="item">Academic</a>
+  				<a href="{{level1_url}}" class="item"><i class="icon certificate"></i>Academic</a>
   			{% url 'level2' as level2_url %}
   				<a href="{{level2_url}}" class="item">Co-Curricular</a>
   			{% url 'level3' as level3_url %}
@@ -49,9 +49,9 @@
   			{% url 'level6' as level6_url %}
   				<a href="{{level6_url}}" class="item ">Enrolled In</a>
 			</div>
-	<!-- </div> -->
-    	</div>
-  	</div>
+  		</div>
+	</div>
+</div>
 </div>
 </body>
 </html>
