@@ -5,8 +5,6 @@
 	<link rel="stylesheet" type="text/css" href="/static/bower_components/semantic/dist/semantic.min.css">
 	<script type="text/javascript" src="/static/bower_components/jquery/dist/jquery.min.js"></script>
 	<script type="text/javascript" src="/static/bower_components/semantic/dist/semantic.min.js"></script>
-	<link rel="stylesheet" href="/static/bower_components/semantic-ui-calendar/dist/calendar.min.css" />
-	<script type="text/javascript" src="/static/bower_components/semantic-ui-calendar/dist/calendar.min.js"></script>
 </head>
 <body>
 <div class="ui grid">
@@ -18,7 +16,14 @@
 				</div>
 				<div class="ui divider"></div>
 				<div class="content">   
-					<form class="ui form">				
+					<form class="ui form">
+							<div class="field">
+   								<label>Who</label>
+   								<select class="ui search dropdown" name="selected-subcat">
+      							<option value="">Group</option>
+      							<option value="">Candidate</option>
+      							</select>
+      						</div>				
     						<div class="two fields">
       							<div class="field">
         							<label>Start date</label>
@@ -43,7 +48,7 @@
    							<div class="two fields">
       							<div class="field">
         							<label>Start date</label>
-        							<div class="ui calendar" id="rangestart">
+ 	      							<div class="ui calendar" id="rangestart">
           								<div class="ui input left icon">
             								<i class="calendar icon"></i>
             									<input type="text" name="p2_st_dt" placeholder="Start">

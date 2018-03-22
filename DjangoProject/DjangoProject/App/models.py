@@ -76,6 +76,7 @@ class Scheduled(DjangoDocument):
     __collection__ = 'scheduleds'
     structure = {
         '_type':unicode,
+        'to_who' : unicode,
         'p1_start_dt':datetime.datetime,
         'p1_end_dt':datetime.datetime,
         'p2_start_dt':datetime.datetime,
@@ -85,7 +86,7 @@ class Scheduled(DjangoDocument):
         'date_creation':datetime.datetime
     }
 
-    required_fields = ['p1_start_dt','p1_end_dt','p2_start_dt','p2_end_dt','p3_start_dt','p3_end_dt']   
+    required_fields = ['to_who','p1_start_dt','p1_end_dt','p2_start_dt','p2_end_dt','p3_start_dt','p3_end_dt']   
     default_values = { 'date_creation':datetime.datetime.utcnow}
 
 @connection.register
