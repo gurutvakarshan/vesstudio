@@ -7,7 +7,7 @@ from django.core.mail import EmailMessage
 
 def registration(request):
 	if request.method== "POST":
-    	role = request.POST.get("role")
+		role = request.POST.get("role")
     	first_name = request.POST.get("first-name")
     	last_name = request.POST.get("last-name")
     	klass = request.POST.get("klass")
@@ -35,7 +35,7 @@ def registration(request):
     	user_member_reg['password'] = password
     	user_member_reg.save()
     	activation_email(request,email)
-    return HttpResponseRedirect("/success_register_activation_mail_sent")
+    return render_to_response('member_registration.html',{},context_instance=RequestContext(request))
 
 def adminjuryreg(request):
 	if request.method== "POST":
