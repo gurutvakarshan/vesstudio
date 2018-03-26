@@ -5,4 +5,4 @@ from django.template import RequestContext
 
 def landing_page(request):
     template = 'landing_page.html'
-    return render(request,template)
+    return render_to_response(template,{},context_instance=RequestContext(request))

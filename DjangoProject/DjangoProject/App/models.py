@@ -228,6 +228,21 @@ class Level6(DjangoDocument):
     required_fields = ['nss','rotract_club','llle','acp','others']
     default_values = {"date_creation":datetime.datetime.utcnow}
 
+@connection.register
+class Notification(DjangoDocument):
+    __database__ = 'ves_dev'
+    __collection__ = 'notifications'
+    structure = {
+        '_type':unicode,
+        'who':unicode,
+        'specific':unicode,
+        'message':unicode,
+        'date_creation':datetime.datetime,
+    }
+
+    required_fields = ['who','specific','message']
+    default_values = {"date_creation":datetime.datetime.utcnow}
+
 # from django import forms
 
 # class UploadFileForm(forms.Form):

@@ -121,3 +121,18 @@ def schedule(request):
 		schedule_instance['p3_end_dt'] = p3_end_dt
 		schedule_instance.save()
 	return render_to_response('schedule.html',{},context_instance=RequestContext(request))
+
+def notification(request):
+	if request.method == "POST":
+		who = request.POST.get("Who")
+		specific = request.POST.get("Specific")
+		message = request.POST.get("Message")
+
+		notification_instance = connection.ves_dev.notifications.Notification()
+		notification_instance['p1_start_dt'] = who
+		notification_instance['p1_end_dt'] = specific
+		notification_instance['p2_start_dt'] = message
+		notification_instance.save()
+	return render_to_response('notification.html',{},context_instance=RequestContext(request))
+
+

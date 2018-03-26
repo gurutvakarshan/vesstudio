@@ -67,7 +67,7 @@ def adminjuryreg(request):
     	user_member_reg['password'] = password
     	user_member_reg.save()
     	activation_email(request,email)
-    return HttpResponseRedirect("/success_register_activation_mail_sent")
+    return HttpResponse("/success_register_activation_mail_sent")
 
 def member_login(request):
 	if request.method =="POST":

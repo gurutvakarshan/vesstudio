@@ -12,5 +12,6 @@ urlpatterns = patterns('DjangoProject.App.views.forms',
     url(r'^/activities/fill_marks/sports/$','level4',name='level4'),
     url(r'^/activities/fill_marks/others/$','level5',name='level5'),
     url(r'^/activities/fill_marks/enrolled_in/$','level6',name='level6'),
-    url(r'^/schedule/set_schedule/$','schedule',name='schedule')
+    url(r'^/schedule/set_schedule/$','schedule',name='schedule'),
+    url(r'^/notification/nofity/$','notification',name='notification')
 )

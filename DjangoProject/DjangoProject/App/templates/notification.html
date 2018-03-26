@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<link rel="stylesheet" type="text/css" href="/static/bower_components/semantic/dist/semantic.min.css">
+	<script type="text/javascript" src="/static/bower_components/jquery/dist/jquery.min.js"></script>
+	<script type="text/javascript" src="/static/bower_components/semantic/dist/semantic.min.js"></script>
+</head>
+<body>
+{% include 'forms_ui.html' %}
+<div class="ui grid">
+ 	<div class="two column centered grid large screen only row">
+		<div class="column">
+	  		<div class="ui segment">
+		   		<div class="content">
+					<div class="header">Notification</div>
+				</div>
+				<div class="ui divider"></div>
+				<div class="field">
+   					<label>Who</label>
+   						<select class="ui search dropdown" name="Who">
+      					<option value="">Jury</option>
+      					<option value="">Contestant</option>
+      					</select>
+      			</div>
+				<div class="ui divider"></div>
+					<div class="field">
+						<label>Specific</label>
+						<input name="total-mark" placeholder="Specific" type="text">
+					</div>
+				<div class="ui divider"></div>
+				<div class="content">   
+					<form class="ui form">				
+						<div class="field">
+    						<label>Message</label>
+    						<textarea rows="2" name="Message"></textarea>
+  						</div>
+  						<div class="ui divider"></div>
+					</form>
+				</div>
+				<div class="extra content">
+					<button class="ui centered button">Submit</button>
+				</div>      
+			</div>
+		</div>
+  	</div>
+</div>
+</body>
+</html>
