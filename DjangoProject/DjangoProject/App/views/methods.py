@@ -7,7 +7,7 @@ from django.core.mail import EmailMessage
 
 def retrive(request):
 	if request.user.is_authenticated:
-
+		
 	else:
     
 	return HttpResponse()
