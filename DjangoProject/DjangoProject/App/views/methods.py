@@ -11,3 +11,10 @@ def retrive(request):
 	else:
     
 	return HttpResponse()
+
+def display(request):
+	if request.user.is_authenticated:
+		
+	else:
+    
+	return HttpResponse()
