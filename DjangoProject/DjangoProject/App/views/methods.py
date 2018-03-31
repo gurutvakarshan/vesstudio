@@ -18,3 +18,17 @@ def display(request):
 	else:
     
 	return HttpResponse()
+
+def edit(request):
+	if request.user.is_authenticated:
+		
+	else:
+    
+	return HttpResponse()
+
+def delet(request):
+	if request.user.is_authenticated:
+		
+	else:
+    
+	return HttpResponse()
