@@ -32,3 +32,10 @@ def delet(request):
 	else:
     
 	return HttpResponse()
+
+def each_activity(request):
+	if request.user.is_authenticated:
+		
+	else:
+    
+	return HttpResponse()
