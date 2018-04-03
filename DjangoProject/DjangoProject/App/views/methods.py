@@ -39,3 +39,10 @@ def each_activity(request):
 	else:
     
 	return HttpResponse()
+
+def retrive_each_stramwise(request):
+	if request.user.is_authenticated:
+		
+	else:
+    
+	return HttpResponse()
