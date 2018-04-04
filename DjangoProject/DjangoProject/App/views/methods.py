@@ -46,3 +46,10 @@ def retrive_each_stramwise(request):
 	else:
     
 	return HttpResponse()
+
+def delete_each_streamwise(request):
+	if request.user.is_authenticated:
+		
+	else:
+    
+	return HttpResponse()
