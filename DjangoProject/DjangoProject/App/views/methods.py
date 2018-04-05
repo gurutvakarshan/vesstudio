@@ -49,7 +49,14 @@ def retrive_each_stramwise(request):
 
 def delete_each_streamwise(request):
 	if request.user.is_authenticated:
-		
+
 	else:
     
+	return HttpResponse()
+
+def algo_for_best():
+	if request.user.is_authenticated:
+
+	else:
+
 	return HttpResponse()
