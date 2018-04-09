@@ -6,4 +6,5 @@ urlpatterns = patterns('DjangoProject.App.views.captcha',
     # url(r'^blog/', include('blog.urls')),
 
     url(r'^[/]$','some_view',name='some_view'),
+    url(r'^[/]$','some_view',name='some_view')
 )
