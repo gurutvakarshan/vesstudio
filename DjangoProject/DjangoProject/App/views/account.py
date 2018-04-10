@@ -116,9 +116,12 @@ def verify_email_first(request):
 def reset_password_later(request):
 	if request.method == "POST":
 		new_password = request.POST.get("new_password")
-		if new_password and request.session.has_key('email'):
+        check_key = request.session.has_key('email')
+        if new_password and check_key:
 			session_email = request.session['email']
-			user_member_reg = connection.ves_dev.contestants_reg.UserMemberReg.update({'email':session_email},{$set:{'password':new_password}})
+            user_member_reg = connection.ves_dev.contestants_reg.UserMemberReg.update({'email':session_email},{$set:{'password':new_password}})
 			return HttpResponseRedirect("/success_password")
 		else :
 			return HttpResponseRedirect("/sorry")
+    else:
+        return render_to_response('some_template',{},context_instance=RequestContext(request))

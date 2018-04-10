@@ -60,3 +60,17 @@ def algo_for_best():
 	else:
 
 	return HttpResponse()
+
+def create_csv(request):
+		if request.user.is_authenticated:
+
+	else:
+
+	return HttpResponse()
+
+def reduce_size_of_img(request):
+	if request.user.is_authenticated:
+
+	else:
+
+	return HttpResponse()
