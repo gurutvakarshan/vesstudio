@@ -74,3 +74,10 @@ def reduce_size_of_img(request):
 	else:
 
 	return HttpResponse()
+
+def check_schedule(request):
+	if request.user.is_authenticated:
+
+	else:
+
+	return HttpResponse()
