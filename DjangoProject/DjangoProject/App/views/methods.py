@@ -81,3 +81,17 @@ def check_schedule(request):
 	else:
 
 	return HttpResponse()
+
+def retrive_imges(request):
+	if request.user.is_authenticated:
+
+	else:
+
+	return HttpResponse()
+
+def make_csv(request):
+	if request.user.is_authenticated:
+
+	else:
+
+	return HttpResponse()
