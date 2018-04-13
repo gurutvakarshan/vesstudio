@@ -95,3 +95,10 @@ def make_csv(request):
 	else:
 
 	return HttpResponse()
+
+def retrive csvs(request):
+		if request.user.is_authenticated:
+
+	else:
+
+	return HttpResponse()	
