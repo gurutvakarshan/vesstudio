@@ -101,4 +101,11 @@ def retrive csvs(request):
 
 	else:
 
+	return HttpResponse()
+
+def delete_csvs(request):
+		if request.user.is_authenticated:
+
+	else:
+
 	return HttpResponse()	
