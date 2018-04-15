@@ -96,15 +96,22 @@ def make_csv(request):
 
 	return HttpResponse()
 
-def retrive csvs(request):
-		if request.user.is_authenticated:
+def retrive_csvs(request):
+	if request.user.is_authenticated:
 
 	else:
 
 	return HttpResponse()
 
 def delete_csvs(request):
-		if request.user.is_authenticated:
+	if request.user.is_authenticated:
+
+	else:
+
+	return HttpResponse()	
+
+def check_document(request):
+	if request.user.is_authenticated:
 
 	else:
 
