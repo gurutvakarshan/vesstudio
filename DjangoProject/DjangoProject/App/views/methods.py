@@ -116,3 +116,10 @@ def check_document(request):
 	else:
 
 	return HttpResponse()	
+
+def retrive_last_uploded(request):
+	if request.user.is_authenticated:
+
+	else:
+
+	return HttpResponse()
