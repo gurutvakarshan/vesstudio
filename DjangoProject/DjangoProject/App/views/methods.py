@@ -123,3 +123,10 @@ def retrive_last_uploded(request):
 	else:
 
 	return HttpResponse()
+
+def retrive_selective_type(request):
+	if request.user.is_authenticated:
+
+	else:
+
+	return HttpResponse()
