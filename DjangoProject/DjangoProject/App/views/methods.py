@@ -136,4 +136,11 @@ def update_catergory_list(request):
 
 	else:
 
+	return HttpResponse()
+
+def activity_on_dashboard():
+	if request.user.is_authenticated:
+
+	else:
+
 	return HttpResponse()	
