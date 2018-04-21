@@ -144,3 +144,10 @@ def activity_on_dashboard():
 	else:
 
 	return HttpResponse()	
+
+def all_notification(request):
+	if request.user.is_authenticated:
+
+	else:
+
+	return HttpResponse()	
