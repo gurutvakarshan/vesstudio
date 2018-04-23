@@ -151,3 +151,10 @@ def all_notification(request):
 	else:
 
 	return HttpResponse()	
+
+def relation(request):
+	if request.user.is_authenticated:
+
+	else:
+
+	return HttpResponse()	
