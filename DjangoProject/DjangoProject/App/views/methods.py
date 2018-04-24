@@ -158,3 +158,10 @@ def relation(request):
 	else:
 
 	return HttpResponse()	
+
+def cal_least_contestant(request):
+	if request.user.is_authenticated:
+
+	else:
+
+	return HttpResponse()	
