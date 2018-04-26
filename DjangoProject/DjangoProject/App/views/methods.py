@@ -171,4 +171,11 @@ def del_notification(request):
 
 	else:
 
+	return HttpResponse()
+
+def del_schedule(request):
+	if request.user.is_authenticated:
+
+	else:
+
 	return HttpResponse()	
