@@ -178,4 +178,18 @@ def del_schedule(request):
 
 	else:
 
+	return HttpResponse()
+
+def get_execution_time(request):
+	if request.user.is_authenticated:
+
+	else:
+
+	return HttpResponse()
+
+def count_pages(request):
+	if request.user.is_authenticated:
+
+	else:
+
 	return HttpResponse()	
