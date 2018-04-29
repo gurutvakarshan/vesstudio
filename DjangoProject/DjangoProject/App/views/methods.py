@@ -192,4 +192,11 @@ def count_pages(request):
 
 	else:
 
+	return HttpResponse()
+
+def count_max_hits(request):
+	if request.user.is_authenticated:
+
+	else:
+
 	return HttpResponse()	
