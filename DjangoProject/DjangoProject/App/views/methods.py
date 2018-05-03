@@ -199,4 +199,11 @@ def count_max_hits(request):
 
 	else:
 
+	return HttpResponse()
+
+def memcached_logic(request):
+	if request.user.is_authenticated:
+
+	else:
+
 	return HttpResponse()	
