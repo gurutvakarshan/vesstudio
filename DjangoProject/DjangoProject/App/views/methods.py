@@ -206,4 +206,11 @@ def memcached_logic(request):
 
 	else:
 
+	return HttpResponse()
+
+def check_notification_status(request):
+	if request.user.is_authenticated:
+
+	else:
+
 	return HttpResponse()	
