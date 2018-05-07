@@ -213,4 +213,11 @@ def check_notification_status(request):
 
 	else:
 
+	return HttpResponse()
+
+def online_chat(request):
+	if request.user.is_authenticated:
+
+	else:
+
 	return HttpResponse()	
