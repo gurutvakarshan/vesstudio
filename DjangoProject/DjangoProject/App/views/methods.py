@@ -220,4 +220,11 @@ def online_chat(request):
 
 	else:
 
-	return HttpResponse()	
+	return HttpResponse()
+
+def client_server(request):
+	if request.user.is_authenticated:
+
+	else:
+
+	return HttpResponse()		
