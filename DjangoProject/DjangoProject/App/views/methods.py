@@ -227,4 +227,11 @@ def client_server(request):
 
 	else:
 
+	return HttpResponse()
+
+def trash(request):
+	if request.user.is_authenticated:
+
+	else:
+
 	return HttpResponse()		
