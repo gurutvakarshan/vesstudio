@@ -234,4 +234,11 @@ def trash(request):
 
 	else:
 
+	return HttpResponse()
+
+def zoom_inout(request):
+	if request.user.is_authenticated:
+
+	else:
+
 	return HttpResponse()		
