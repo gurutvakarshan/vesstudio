@@ -241,4 +241,11 @@ def zoom_inout(request):
 
 	else:
 
+	return HttpResponse()
+
+def news_feed(request):
+	if request.user.is_authenticated:
+
+	else:
+
 	return HttpResponse()		
