@@ -248,4 +248,11 @@ def news_feed(request):
 
 	else:
 
+	return HttpResponse()
+
+def suggestion(request):
+	if request.user.is_authenticated:
+
+	else:
+
 	return HttpResponse()		
