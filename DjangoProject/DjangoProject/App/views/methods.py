@@ -262,4 +262,11 @@ def filter(request):
 
 	else:
 
-	return HttpResponse()		
+	return HttpResponse()
+		
+def set_order_for_file(request):
+	if request.user.is_authenticated:
+
+	else:
+
+	return HttpResponse()
