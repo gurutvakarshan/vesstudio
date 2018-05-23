@@ -270,3 +270,10 @@ def set_order_for_file(request):
 	else:
 
 	return HttpResponse()
+
+def pdf(request):
+	if request.user.is_authenticated:
+
+	else:
+
+	return HttpResponse()
