@@ -284,3 +284,10 @@ def textfile(request):
 	else:
 
 	return HttpResponse()	
+
+def file(request):
+	if request.user.is_authenticated:
+
+	else:
+
+	return HttpResponse()
