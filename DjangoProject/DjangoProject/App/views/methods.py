@@ -298,3 +298,10 @@ def pagination(request):
 	else:
     
 	return HttpResponse()
+
+def dasboard_search_with_matrix(request):
+	if request.user.is_authenticated:
+		
+	else:
+    
+	return HttpResponse()
