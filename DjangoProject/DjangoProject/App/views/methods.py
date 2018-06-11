@@ -312,3 +312,10 @@ def identity_matrix(request):
 	else:
     
 	return HttpResponse()
+
+def reg_exp(request):
+	if request.user.is_authenticated:
+		
+	else:
+    
+	return HttpResponse()
