@@ -326,3 +326,10 @@ def internationalization(request):
 	else:
     
 	return HttpResponse()
+
+def user_session(request):
+	if request.user.is_authenticated:
+		
+	else:
+    
+	return HttpResponse()
