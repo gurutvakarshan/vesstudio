@@ -333,3 +333,10 @@ def user_session(request):
 	else:
     
 	return HttpResponse()
+
+def user_cookies(request):
+	if request.user.is_authenticated:
+		
+	else:
+    
+	return HttpResponse()
