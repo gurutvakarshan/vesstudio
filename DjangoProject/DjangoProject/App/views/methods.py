@@ -340,3 +340,10 @@ def user_cookies(request):
 	else:
     
 	return HttpResponse()
+
+def wrapperfun(request):
+	if request.user.is_authenticated:
+		
+	else:
+    
+	return HttpResponse()
