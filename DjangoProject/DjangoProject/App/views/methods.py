@@ -7,7 +7,7 @@ from django.core.mail import EmailMessage
 
 def retrive(request):
 	if request.user.is_authenticated:
-		
+				
 	else:
     
 	return HttpResponse()
@@ -62,7 +62,7 @@ def algo_for_best():
 	return HttpResponse()
 
 def create_csv(request):
-		if request.user.is_authenticated:
+	if request.user.is_authenticated:
 
 	else:
 
@@ -342,6 +342,13 @@ def user_cookies(request):
 	return HttpResponse()
 
 def wrapperfun(request):
+	if request.user.is_authenticated:
+		
+	else:
+    
+	return HttpResponse()
+
+def decorator(request):
 	if request.user.is_authenticated:
 		
 	else:
