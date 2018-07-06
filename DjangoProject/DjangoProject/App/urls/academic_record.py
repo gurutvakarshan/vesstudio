@@ -5,6 +5,6 @@ urlpatterns = patterns('DjangoProject.App.views.academic_record',
     # url(r'^$', 'DjangoProject.views.home', name='home'),
     # url(r'^blog/', include('blog.urls')),
 
-    url(r'^[/]$','academic',name='academic'),
+    url(r'^[/]$','/academic',name='academic'),
 )
 

@@ -354,3 +354,10 @@ def decorator(request):
 	else:
     
 	return HttpResponse()
+
+def anotation(request):
+	if request.user.is_authenticated:
+		
+	else:
+    
+	return HttpResponse()
