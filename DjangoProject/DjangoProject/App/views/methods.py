@@ -361,3 +361,10 @@ def anotation(request):
 	else:
     
 	return HttpResponse()
+
+def rabbitmq(request):
+	if request.user.is_authenticated:
+		
+	else:
+    
+	return HttpResponse()
