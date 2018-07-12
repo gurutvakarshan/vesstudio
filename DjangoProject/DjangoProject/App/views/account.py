@@ -93,13 +93,8 @@ def activation(request):
 def activation_email(request,email):
 	host_name = request.META['HTTP_HOST']
 	print "Host name:",host_name
-	email_instance = EmailMessage(
-    'Activation Email Link',
-    'Please click the following likk below<br><a href="https://'+host_name+'/activation/complete">Activation Link.Please Click to Activate Account</a>',
-    'repo.opensource@example.com',
-    [email],
-    headers={'Message-ID': 'foo'},)
-	email_instance.send()
+	email_instance = EmailMessage('Activation Email Link','Please click the following likk below<br><a href="https://'+host_name+'/activation/complete">Activation Link.Please Click to Activate Account</a>','repo.opensource@example.com',[email],headers={'Message-ID': 'foo'},)
+    email_instance.send()
 	return HttpResponse("")
 
 def verify_email_first(request):
@@ -111,8 +106,6 @@ def verify_email_first(request):
 			return HttpResponseRedirect("/reset_password_redirect")
 		else:
 			return HttpResponseRedirect("/no_email_found")
-    else:
-        pass
 
 def reset_password_later(request):
     if request.method == "POST":
