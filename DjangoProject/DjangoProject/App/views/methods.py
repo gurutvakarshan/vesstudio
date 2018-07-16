@@ -89,7 +89,7 @@ def retrive_imges(request):
 
 	return HttpResponse()
 
-def make_csv(request):
+def Make_csv(request):
 	if request.user.is_authenticated:
 
 	else:
@@ -149,7 +149,7 @@ def all_notification(request):
 	if request.user.is_authenticated:
 
 	else:
-
+		
 	return HttpResponse()	
 
 def relation(request):
@@ -294,84 +294,84 @@ def file(request):
 
 def pagination(request):
 	if request.user.is_authenticated:
-		
+			
 	else:
-    
+	    
 	return HttpResponse()
 
 def dasboard_search_with_matrix(request):
 	if request.user.is_authenticated:
-		
+			
 	else:
-    
+	    
 	return HttpResponse()
 
 def identity_matrix(request):
 	if request.user.is_authenticated:
-		
+			
 	else:
-    
+	    
 	return HttpResponse()
 
 def reg_exp(request):
 	if request.user.is_authenticated:
-		
+			
 	else:
-    
+	    
 	return HttpResponse()
 
 def internationalization(request):
 	if request.user.is_authenticated:
-		
+			
 	else:
-    
+	    
 	return HttpResponse()
 
 def user_session(request):
 	if request.user.is_authenticated:
-		
+			
 	else:
-    
+	    
 	return HttpResponse()
 
 def user_cookies(request):
 	if request.user.is_authenticated:
-		
+			
 	else:
-    
+	    
 	return HttpResponse()
 
 def wrapperfun(request):
 	if request.user.is_authenticated:
-		
+			
 	else:
-    
+	    
 	return HttpResponse()
 
 def decorator(request):
 	if request.user.is_authenticated:
-		
+			
 	else:
-    
+	    
 	return HttpResponse()
 
 def anotation(request):
 	if request.user.is_authenticated:
-		
+			
 	else:
-    
+	    
 	return HttpResponse()
 
 def rabbitmq(request):
 	if request.user.is_authenticated:
-		
+			
 	else:
-    
+	    
 	return HttpResponse()
 
-def mysql(request):
+def Mysql(request):
 	if request.user.is_authenticated:
-		
+			
 	else:
-    
+	    
 	return HttpResponse()
