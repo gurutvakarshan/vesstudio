@@ -18,9 +18,9 @@
 <div class="ui massive fluid compact menu">
 	{% url 'academic' as academic_url %}
 		<a href="{{academic_url}}" class="item"><i class="home icon"></i>Academic</a>
-	{% url 'user' as user_url %}
+	{% url 'User' as user_url %}
   		<a href="{{user_url}}" class="item">User</a>
-  	{% url 'prouser' as prouser_url %}
+  	{% url 'ProUser' as prouser_url %}
   		<a href="{{prouser_url}}" class="item">ProUser</a>
   	{% url 'registration' as account_url %}
   		<a href="{{account_url}}" class="item">Account</a> 

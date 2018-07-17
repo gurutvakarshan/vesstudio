@@ -4,21 +4,22 @@ from django.template import loader
 from django.template import RequestContext
 from django.contrib.auth import authenticate, login,logout
 from django.core.mail import EmailMessage
+from DjangoProject.App.models import *
 
 def registration(request):
-	if request.method== "POST":
-		role = request.POST.get("role")
-    	first_name = request.POST.get("first-name")
-    	last_name = request.POST.get("last-name")
-    	klass = request.POST.get("klass")
-        roll_number = request.POST.get("roll-number")
-        birth_date = request.POST.get("birth-date")
-        telephone_number = request.POST.get("telephone-number")
-        mobile_number = request.POST.get("mobile-number")
-        address = request.POST.get("address")
-        activity = request.POST.get("activity")
-        email = request.POST.get("email")
-        password = request.POST.get("password")
+	if request.method== "GET":
+		role = request.GET.get("role")
+    	first_name = request.GET.get("first-name")
+    	last_name = request.GET.get("last-name")
+    	klass = request.GET.get("klass")
+        roll_number = request.GET.get("roll-number")
+        birth_date = request.GET.get("birth-date")
+        telephone_number = request.GET.get("telephone-number")
+        mobile_number = request.GET.get("mobile-number")
+        address = request.GET.get("address")
+        activity = request.GET.get("activity")
+        email = request.GET.get("email")
+        password = request.GET.get("password")
 
         user_member_reg = connection.ves_dev.contestants_reg.UserMemberReg()
     	user_member_reg['role'] = role
@@ -90,13 +91,15 @@ def member_logout(request):
 def activation(request):
 	return HttpResponse("Your account is now activate.")
 
-def activation_email(request,email):
-	host_name = request.META['HTTP_HOST']
-	print "Host name:",host_name
-	email_instance = EmailMessage('Activation Email Link','Please click the following likk below<br><a href="https://'+host_name+'/activation/complete">Activation Link.Please Click to Activate Account</a>','repo.opensource@example.com',
-    [email],headers={'Message-ID': 'foo'},)
-    email_instance.send()
-    return HttpResponse("")
+# def activation_email(request,email):
+# 	host_name = request.META['HTTP_HOST']
+# 	print "Host name:",host_name
+# 	email_instance = EmailMessage('Activation Email Link','Please click the following likk below<br><a href="https://'+host_name+'/activation/complete">Activation Link.Please Click to Activate Account</a>',"repo.opensource@example.com",[email],headers={'Message-ID': 'foo'},)
+#     if email_instance:
+#         email_instance.send()
+#         return HttpResponse("")
+#     else:
+#         pass
 
 def verify_email_first(request):
 	if request.method =="POST":
@@ -108,18 +111,21 @@ def verify_email_first(request):
 		else:
 			return HttpResponseRedirect("/no_email_found")
 
-def reset_password_later(request):
-    if request.method == "POST":
-        new_password = request.POST.get("new_password")
-        check_key = request.session.has_key('email')
-        if new_password and check_key:
-            session_email = request.session['email']
-            user_member_reg = connection.ves_dev.contestants_reg.UserMemberReg.update({'email':session_email},{$set:{'password':new_password}})
-            return HttpResponseRedirect("/success_password")
-		else:
-			return HttpResponseRedirect("/sorry")
-    else:
-        return render_to_response('some_template',{},context_instance=RequestContext(request))
+# def reset_password_later(request):
+#     if request.method == "POST":
+#         new_password = request.POST.get("new_password")
+#         check_key = request.session.has_key('email')
+#         if new_password and check_key:
+#             session_email = request.session['email']
+#             user_member_reg = connection.ves_dev.contestants_reg.UserMemberReg.update(
+#                                                                                         {'email':session_email},
+#                                                                                         {$set:{'password':new_password}}    
+#                                                                                     )
+#             return HttpResponseRedirect("/success_password")
+# 		else:
+# 			return HttpResponseRedirect("/sorry")
+#     else:
+#         return render_to_response('some_template',{},context_instance=RequestContext(request))
 
 def success(request):
     return HttpResponse("")
