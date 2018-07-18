@@ -7,40 +7,40 @@ from django.core.mail import EmailMessage
 from DjangoProject.App.models import *
 
 def registration(request):
-	if request.method== "GET":
-		role = request.GET.get("role")
-    	first_name = request.GET.get("first-name")
-    	last_name = request.GET.get("last-name")
-    	klass = request.GET.get("klass")
-        roll_number = request.GET.get("roll-number")
-        birth_date = request.GET.get("birth-date")
-        telephone_number = request.GET.get("telephone-number")
-        mobile_number = request.GET.get("mobile-number")
-        address = request.GET.get("address")
-        activity = request.GET.get("activity")
-        email = request.GET.get("email")
-        password = request.GET.get("password")
+	if request.method== "POST":
+		role = request.POST.get("role")
+    	first_name = request.POST.get("first-name")
+    	last_name = request.POST.get("last-name")
+    	klass = request.POST.get("klass")
+        roll_number = request.POST.get("roll-number")
+        birth_date = request.POST.get("birth-date")
+        telephone_number = request.POST.get("telephone-number")
+        mobile_number = request.POST.get("mobile-number")
+        address = request.POST.get("address")
+        activity = request.POST.get("activity")
+        email = request.POST.get("email")
+        password = request.POST.get("password")
 
         user_member_reg = connection.ves_dev.contestants_reg.UserMemberReg()
-    	user_member_reg['role'] = role
-    	user_member_reg['first_name'] = first_name
-    	user_member_reg['last_name'] = last_name
-    	user_member_reg['klass'] = klass
-    	user_member_reg['roll_number'] = roll_number
-    	user_member_reg['birth_date'] = birth_date
-    	user_member_reg['telephone_number'] = telephone_number
-    	user_member_reg['mobile_number'] = mobile_number
-    	user_member_reg['address'] = address
+        user_member_reg['role'] = role
+        user_member_reg['first_name'] = first_name
+        user_member_reg['last_name'] = last_name
+        user_member_reg['klass'] = klass
+        user_member_reg['roll_number'] = roll_number
+        user_member_reg['birth_date'] = birth_date
+        user_member_reg['telephone_number'] = telephone_number
+        user_member_reg['mobile_number'] = mobile_number
+        user_member_reg['address'] = address
     	# user_member_reg['activity'] = activity
-    	user_member_reg['email'] = email
-    	user_member_reg['password'] = password
-    	user_member_reg.save()
-    	activation_email(request,email)
-	return render_to_response('member_registration.html',{},context_instance=RequestContext(request))
+        user_member_reg['email'] = email
+        user_member_reg['password'] = password
+        user_member_reg.save()
+        activation_email(request,email)
+        return render_to_response('member_registration.html',{},context_instance=RequestContext(request))
 
 def adminjuryreg(request):
 	if request.method== "POST":
-		role = request.POST.get("role")
+		role2 = request.POST.get("role")
     	first_name = request.POST.get("first-name")
     	last_name = request.POST.get("last-name")
     	klass = request.POST.get("klass")
@@ -54,7 +54,7 @@ def adminjuryreg(request):
         password = request.POST.get("password")
 
         user_member_reg = connection.ves_dev.admins_juries_reg.Admin_Jury_Member_Reg()
-    	user_member_reg['role'] = role
+    	user_member_reg['role'] = role2
     	user_member_reg['first_name'] = first_name
     	user_member_reg['last_name'] = last_name
     	user_member_reg['klass'] = klass
