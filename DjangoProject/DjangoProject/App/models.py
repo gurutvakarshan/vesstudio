@@ -56,7 +56,7 @@ class UserMemberReg(DjangoDocument):
         'date_creation':datetime.datetime,
     }
 
-    required_fields = ['role','first_name','last_name','klass','roll_number','birth_date','mobile_number','address','email','password','date_creation']
+    required_fields = ['first_name','role','last_name','klass','roll_number','birth_date','mobile_number','address','email','password','date_creation']
     default_values = {'date_creation':datetime.datetime.utcnow}
 
 @connection.register
