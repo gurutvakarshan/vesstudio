@@ -131,4 +131,5 @@ def verify_email_first(request):
 #         return render_to_response('some_template',{},context_instance=RequestContext(request))
 
 def success(request):
-    return HttpResponse("")
+    template = "success.html"
+    return render_to_response(template,{},context_instance=RequestContext(request))
