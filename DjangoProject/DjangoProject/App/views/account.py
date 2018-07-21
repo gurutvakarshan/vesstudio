@@ -133,3 +133,7 @@ def verify_email_first(request):
 def success(request):
     template = "success.html"
     return render_to_response(template,{},context_instance=RequestContext(request))
+
+def no_email_found(request):
+    template = "no_email_found.html"
+    return render_to_response(template,{},context_instance=RequestContext(request))
