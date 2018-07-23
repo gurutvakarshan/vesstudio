@@ -141,3 +141,7 @@ def no_email_found(request):
 def reset_password_redirect(request):
     template = "no_email_found.html"
     return render_to_response(template,{},context_instance=RequestContext(request))
+
+def invalid(request):
+    template = "invalid.html"
+    return render_to_response(template,{},context_instance=RequestContext(request))
