@@ -145,3 +145,7 @@ def reset_password_redirect(request):
 def invalid(request):
     template = "invalid.html"
     return render_to_response(template,{},context_instance=RequestContext(request))
+
+def logout(request):
+    template = "logout.html"
+    return render_to_response(template,{},context_instance=RequestContext(request))
