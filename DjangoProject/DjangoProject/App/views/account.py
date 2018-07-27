@@ -153,4 +153,7 @@ def logout(request):
 def success_register_activation_mail_sent(request):
     template = "success_register_activation_mail_sent.html"
     return render_to_response(template,{},context_instance=RequestContext(request))
-    return render_to_response(template,{},context_instance=RequestContext(request))    
+
+def cache(request):
+    template = "cache.html"
+    return render_to_response(template,{},context_instance=RequestContext(request))   
