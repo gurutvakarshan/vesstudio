@@ -157,3 +157,7 @@ def success_register_activation_mail_sent(request):
 def cache(request):
     template = "cache.html"
     return render_to_response(template,{},context_instance=RequestContext(request))   
+
+def activation_template(request):
+    template = "activation_template.html"
+    return render_to_response(template,{},context_instance=RequestContext(request)) 
