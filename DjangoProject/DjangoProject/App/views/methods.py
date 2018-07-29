@@ -375,3 +375,10 @@ def Mysql(request):
 	else:
 	    
 	return HttpResponse()
+
+def celery(request):
+	if request.user.is_authenticated:
+			
+	else:
+	    
+	return HttpResponse()
