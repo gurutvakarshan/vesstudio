@@ -382,3 +382,10 @@ def celery(request):
 	else:
 	    
 	return HttpResponse()
+
+def magic_method(request):
+	if request.user.is_authenticated:
+			
+	else:
+	    
+	return HttpResponse()
