@@ -389,3 +389,10 @@ def magic_method(request):
 	else:
 	    
 	return HttpResponse()
+
+def functiontool(request):
+	if request.user.is_authenticated:
+			
+	else:
+	    
+	return HttpResponse()
