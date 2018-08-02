@@ -403,3 +403,10 @@ def builtin(request):
 	else:
 	    
 	return HttpResponse()
+
+def builtin2(request):
+	if request.user.is_authenticated:
+			
+	else:
+	    
+	return HttpResponse()
