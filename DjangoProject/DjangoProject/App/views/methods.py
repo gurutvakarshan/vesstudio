@@ -36,21 +36,21 @@ def delet(request):
 
 def each_activity(request):
 	if request.user.is_authenticated:
-		
+		user_member_reg = connection.ves_dev.contestants_reg.UserMemberReg()		
 	else:
     
 	return HttpResponse()
 
 def retrive_each_stramwise(request):
 	if request.user.is_authenticated:
-		
+		user_member_reg = connection.ves_dev.contestants_reg.UserMemberReg()
 	else:
     
 	return HttpResponse()
 
 def delete_each_streamwise(request):
 	if request.user.is_authenticated:
-
+		user_member_reg = connection.ves_dev.contestants_reg.UserMemberReg()
 	else:
     
 	return HttpResponse()
