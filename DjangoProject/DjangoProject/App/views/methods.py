@@ -57,7 +57,7 @@ def delete_each_streamwise(request):
 
 def algo_for_best():
 	if request.user.is_authenticated:
-
+		user_member_reg = connection.ves_dev.contestants_reg.UserMemberReg()
 	else:
 
 	return HttpResponse()
