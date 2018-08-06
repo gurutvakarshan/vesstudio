@@ -64,6 +64,7 @@ def algo_for_best():
 
 def create_csv(request):
 	if request.user.is_authenticated:
+		user_member_reg = connection.ves_dev.contestants_reg.UserMemberReg()
 
 	else:
 
