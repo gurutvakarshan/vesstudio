@@ -79,6 +79,7 @@ def reduce_size_of_img(request):
 
 def check_schedule(request):
 	if request.user.is_authenticated:
+		user_member_reg = connection.ves_dev.contestants_reg.UserMemberReg()
 
 	else:
 
