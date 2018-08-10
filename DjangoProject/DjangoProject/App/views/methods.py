@@ -124,6 +124,7 @@ def check_document(request):
 
 def retrive_last_uploded(request):
 	if request.user.is_authenticated:
+		user_member_reg = connection.ves_dev.contestants_reg.UserMemberReg()
 
 	else:
 
