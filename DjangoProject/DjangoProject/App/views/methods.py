@@ -110,6 +110,7 @@ def retrive_csvs(request):
 
 def delete_csvs(request):
 	if request.user.is_authenticated:
+		user_member_reg = connection.ves_dev.contestants_reg.UserMemberReg()
 
 	else:
 
