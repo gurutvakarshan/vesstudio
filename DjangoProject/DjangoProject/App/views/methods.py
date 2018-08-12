@@ -134,6 +134,7 @@ def retrive_last_uploded(request):
 
 def retrive_selective_type(request):
 	if request.user.is_authenticated:
+		user_member_reg = connection.ves_dev.contestants_reg.UserMemberReg()
 
 	else:
 
