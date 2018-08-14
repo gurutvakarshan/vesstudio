@@ -142,7 +142,7 @@ def retrive_selective_type(request):
 
 def update_catergory_list(request):
 	if request.user.is_authenticated:
-
+		user_member_reg = connection.ves_dev.contestants_reg.UserMemberReg()
 	else:
 
 	return HttpResponse()
