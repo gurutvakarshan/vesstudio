@@ -149,6 +149,7 @@ def update_catergory_list(request):
 
 def activity_on_dashboard():
 	if request.user.is_authenticated:
+		user_member_reg = connection.ves_dev.contestants_reg.UserMemberReg()
 
 	else:
 
