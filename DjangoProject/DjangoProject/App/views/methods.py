@@ -172,14 +172,14 @@ def relation(request):
 
 def cal_least_contestant(request):
 	if request.user.is_authenticated:
-
+		
 	else:
 
 	return HttpResponse()
 
 def del_notification(request):
 	if request.user.is_authenticated:
-
+		user_member_reg = connection.ves_dev.contestants_reg.UserMemberReg()
 	else:
 
 	return HttpResponse()
