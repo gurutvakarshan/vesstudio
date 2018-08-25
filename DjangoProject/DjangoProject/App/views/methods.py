@@ -235,7 +235,7 @@ def online_chat(request):
 
 def client_server(request):
 	if request.user.is_authenticated:
-
+		
 	else:
 
 	return HttpResponse()
@@ -340,7 +340,7 @@ def internationalization(request):
 
 def user_session(request):
 	if request.user.is_authenticated:
-			
+		user_member_reg = connection.ves_dev.contestants_reg.UserMemberReg()	
 	else:
 	    
 	return HttpResponse()
