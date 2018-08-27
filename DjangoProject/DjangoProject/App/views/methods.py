@@ -347,7 +347,7 @@ def user_session(request):
 
 def user_cookies(request):
 	if request.user.is_authenticated:
-			
+		user_member_reg = connection.ves_dev.contestants_	
 	else:
 	    
 	return HttpResponse()
