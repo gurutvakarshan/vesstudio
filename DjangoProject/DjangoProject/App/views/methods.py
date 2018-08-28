@@ -403,7 +403,7 @@ def magic_method(request):
 
 def functiontool(request):
 	if request.user.is_authenticated:
-			
+		user_member_reg = connection.ves_dev.contestants_reg.UserMemberReg()	
 	else:
 	    
 	return HttpResponse()
