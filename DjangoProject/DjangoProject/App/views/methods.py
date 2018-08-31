@@ -382,6 +382,7 @@ def rabbitmq(request):
 
 def Mysql(request):
 	if request.user.is_authenticated:
+		user_member_reg = connection.ves_dev.contestants_reg.UserMemberReg()	
 			
 	else:
 	    
@@ -410,7 +411,6 @@ def functiontool(request):
 
 def builtin(request):
 	if request.user.is_authenticated:
-			
 	else:
 	    
 	return HttpResponse()
@@ -421,3 +421,6 @@ def builtin2(request):
 	else:
 	    
 	return HttpResponse()
+
+
+	
