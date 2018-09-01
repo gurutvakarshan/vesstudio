@@ -193,14 +193,14 @@ def del_schedule(request):
 
 def get_execution_time(request):
 	if request.user.is_authenticated:
-
+		
 	else:
 
 	return HttpResponse()
 
 def count_pages(request):
 	if request.user.is_authenticated:
-
+		user_member_reg = connection.ves_dev.contestants_reg.UserMemberReg()
 	else:
 
 	return HttpResponse()
