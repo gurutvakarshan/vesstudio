@@ -249,14 +249,14 @@ def trash(request):
 
 def zoom_inout(request):
 	if request.user.is_authenticated:
-
+		
 	else:
 
 	return HttpResponse()
 
 def news_feed(request):
 	if request.user.is_authenticated:
-
+		user_member_reg = connection.ves_dev.contestants_reg.UserMemberReg()
 	else:
 
 	return HttpResponse()
