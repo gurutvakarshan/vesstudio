@@ -11,7 +11,7 @@ https://docs.djangoproject.com/en/1.6/ref/settings/
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 import os
 import sys
-
+from mongoengine import *
 sys.dont_write_bytecode = True
 
 BASE_DIR = os.path.dirname(os.path.dirname(__file__))
@@ -77,6 +77,7 @@ DATABASES = {
     },
 }
 
+connect('system')
 # Internationalization
 # https://docs.djangoproject.com/en/1.6/topics/i18n/
 
