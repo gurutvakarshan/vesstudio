@@ -422,5 +422,9 @@ def builtin2(request):
 	    
 	return HttpResponse()
 
-
-	
+def makepdf(request):
+	if request.user.is_authenticated:
+			
+	else:
+	    
+	return HttpResponse()	
