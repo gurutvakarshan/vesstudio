@@ -70,6 +70,9 @@ class Admin_Jury_Member_Reg(UserMemberReg):
     required_fields = ['activity']
     default_values = {}
 
+class Admin_Jury_Member_Reg(Document):
+    activity = StringField()
+
 @connection.register
 class Scheduled(DjangoDocument):
     __database__ ='ves_dev'
