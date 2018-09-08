@@ -36,41 +36,22 @@ class ProfessionalUser(User):
     def professional_stuff(self):
         return "stuff"
 
-@connection.register
-class UserMemberReg(DjangoDocument):
-    __database__ = 'ves_dev'
-    __collection__ = 'contestants_reg'
-    structure = {
-        '_type': unicode,
-        'role': unicode,
-        'first_name': unicode,
-        'last_name':unicode,
-        'klass':unicode,
-        'roll_number':int,
-        'birth_date': datetime.datetime,
-        'telephone_number':unicode,
-        'mobile_number':unicode,
-        'address':unicode,
-        'email':unicode,
-        'password':unicode,
-        'date_creation':datetime.datetime,
-    }
+class UserMemberReg(Document):
+        role = StringField()
+        first_name = StringField()
+        last_name = StringField()
+        klass = StringField()
+        roll_number = IntField()
+        birth_date = DateTimeField(default=datetime.datetime.now)
+        telephone_number = IntField()
+        mobile_number = IntField()
+        address = StringField()
+        email =  EmailField()
+        password = StringField()
+        date_creation = DateTimeField(default=datetime.datetime.now)
+        meta = {'allow_inheritance': True}
 
-    required_fields = ['first_name','role','last_name','klass','roll_number','birth_date','mobile_number','address','email','password','date_creation']
-    default_values = {'date_creation':datetime.datetime.utcnow}
-
-@connection.register
 class Admin_Jury_Member_Reg(UserMemberReg):
-    __database__ = 'ves_dev'
-    __collection__ = 'admins_juries_reg'
-    structure = {
-        'activity':unicode,
-    }
-
-    required_fields = ['activity']
-    default_values = {}
-
-class Admin_Jury_Member_Reg(Document):
     activity = StringField()
 
 @connection.register
