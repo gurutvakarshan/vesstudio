@@ -2,54 +2,22 @@ from django_mongokit import connection
 from django_mongokit.document import DjangoDocument
 from mongokit import *
 import datetime
-connection = Connection()
-
-@connection.register
-class StoreLargeFiles(Document):
-    __database__ = "test2"
-    __collection__ = "largefiles"
-    structure = {
-        "title" : unicode,
-    }
-    gridfs = {
-        'files': ['source','template'],
-        'containers':['images'],
-    }
-
-@connection.register
-class User(Document):
-    __database__ = "tutorial"
-    __collection__ = "users"
-    structure = {
-        "_type": unicode,
-        "name": unicode,
-        "is_registered": bool,
-    }
-    default_values = {"is_registered": False}
-
-@connection.register
-class ProfessionalUser(User):
-    structure = {
-        "activity": unicode,
-    }
-
-    def professional_stuff(self):
-        return "stuff"
+from mongoengine import *
 
 class UserMemberReg(Document):
-        role = StringField()
-        first_name = StringField()
-        last_name = StringField()
-        klass = StringField()
-        roll_number = IntField()
-        birth_date = DateTimeField(default=datetime.datetime.now)
-        telephone_number = IntField()
-        mobile_number = IntField()
-        address = StringField()
-        email =  EmailField()
-        password = StringField()
-        date_creation = DateTimeField(default=datetime.datetime.now)
-        meta = {'allow_inheritance': True}
+    role = StringField()
+    first_name = StringField()
+    last_name = StringField()
+    klass = StringField()
+    roll_number = IntField()
+    birth_date = DateTimeField(default=datetime.datetime.now)
+    telephone_number = IntField()
+    mobile_number = IntField()
+    address = StringField()
+    email =  EmailField()
+    password = StringField()
+    date_creation = DateTimeField(default=datetime.datetime.now)
+    meta = {'allow_inheritance': True}
 
 class Admin_Jury_Member_Reg(UserMemberReg):
     activity = StringField()
@@ -197,38 +165,21 @@ class Level5(DjangoDocument):
 
 @connection.register
 class Level6(DjangoDocument):
-    __database__ = 'ves_dev'
-    __collection__ = 'levels6'
-    structure = {
-        '_type':unicode,
-        'nss':unicode,
-        'rotract_club':unicode,
-        'llle':unicode,
-        'acp':unicode,
-        'others':list,
-        'date_creation':datetime.datetime,
-    }
-
-    required_fields = ['nss','rotract_club','llle','acp','others']
-    default_values = {"date_creation":datetime.datetime.utcnow}
-
-@connection.register
-class Notification(DjangoDocument):
-    __database__ = 'ves_dev'
-    __collection__ = 'notifications'
-    structure = {
-        '_type':unicode,
-        'who':unicode,
-        'specific':unicode,
-        'message':unicode,
-        'date_creation':datetime.datetime,
-    }
-
-    required_fields = ['who','specific','message']
-    default_values = {"date_creation":datetime.datetime.utcnow}
-
+        nss =  StringField()
+        rotract_club = StringField()
+        llle = StringField()
+        acp = StringField()
+        others = StringField()
+        date_creation = DateTimeField(default=datetime.datetime.now)
+    
+class Notification(Document):
+        who = StringField()
+        specific = StringField()
+        message = StringField()
+        date_creation = DateTimeField(default=datetime.datetime.now)
 # from django import forms
 
 # class UploadFileForm(forms.Form):
 #     title = forms.CharField(max_length=50)
 #     file = forms.FileField()
+
