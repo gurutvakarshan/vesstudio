@@ -129,22 +129,12 @@ class Level3(DjangoDocument):
     required_fields = ['selected_subcat','year','event','description']
     default_values = {'date_creation':datetime.datetime.utcnow}
 
-
-@connection.register
-class Level4(DjangoDocument):
-    __database__  = 'ves_dev'
-    __collection__ = 'levels4'
-    structure = {
-        '_type':unicode,
-        'selected_subcat': unicode,
-        'year':datetime.datetime,
-        'event':unicode,
-        'description':unicode,
-        'date_creation':datetime.datetime,
-    }
-
-    required_fields = ['selected_subcat','year','event','description']
-    default_values = {'date_creation':datetime.datetime.utcnow} 
+class Level4(Document)
+    selected_subcat = StringField()
+    year = DateTimeField(default=datetime.datetime.now)
+    event = StringField()
+    description = StringField()
+    date_creation =  DateTimeField(default=datetime.datetime.now)
 
 class Level5(Document):
     selected_subcat = StringField()
@@ -154,18 +144,18 @@ class Level5(Document):
     date_creation = DateTimeField(default=datetime.datetime.now)
     
 class Level6(Document):
-        nss =  StringField()
-        rotract_club = StringField()
-        llle = StringField()
-        acp = StringField()
-        others = StringField()
-        date_creation = DateTimeField(default=datetime.datetime.now)
+    nss =  StringField()
+    rotract_club = StringField()
+    llle = StringField()
+    acp = StringField()
+    others = StringField()
+    date_creation = DateTimeField(default=datetime.datetime.now)
     
 class Notification(Document):
-        who = StringField()
-        specific = StringField()
-        message = StringField()
-        date_creation = DateTimeField(default=datetime.datetime.now)
+    who = StringField()
+    specific = StringField()
+    message = StringField()
+    date_creation = DateTimeField(default=datetime.datetime.now)
 # from django import forms
 
 # class UploadFileForm(forms.Form):
