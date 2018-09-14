@@ -113,21 +113,12 @@ class Level2(DjangoDocument):
     required_fields = ['selected_subcat','year','event','description']
     default_values = {'date_creation':datetime.datetime.utcnow}
 
-@connection.register
-class Level3(DjangoDocument):
-    __database__  = 'ves_dev'
-    __collection__ = 'levels3'
-    structure = {
-        '_type':unicode,
-        'selected_subcat': unicode,
-        'year':datetime.datetime,
-        'event':unicode,
-        'description':unicode,
-        'date_creation':datetime.datetime,
-    }
-
-    required_fields = ['selected_subcat','year','event','description']
-    default_values = {'date_creation':datetime.datetime.utcnow}
+class Level3(Document)
+        selected_subcat = StringField()
+        year = StringField()
+        event = StringField()
+        description = StringField()
+        date_creation = DateTimeField(default=datetime.datetime.now)
 
 class Level4(Document)
     selected_subcat = StringField()
