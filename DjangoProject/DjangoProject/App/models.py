@@ -1,6 +1,3 @@
-from django_mongokit import connection
-from django_mongokit.document import DjangoDocument
-from mongokit import *
 import datetime
 from mongoengine import *
 
@@ -23,96 +20,43 @@ class Admin_Jury_Member_Reg(UserMemberReg):
     activity = StringField()
 
 @connection.register
-class Scheduled(DjangoDocument):
-    __database__ ='ves_dev'
-    __collection__ = 'scheduleds'
-    structure = {
-        '_type':unicode,
-        'to_who' : unicode,
-        'p1_start_dt':datetime.datetime,
-        'p1_end_dt':datetime.datetime,
-        'p2_start_dt':datetime.datetime,
-        'p2_end_dt':datetime.datetime,
-        'p3_start_dt':datetime.datetime,
-        'p3_end_dt':datetime.datetime,
-        'date_creation':datetime.datetime
-    }
+class Scheduled(Document)
+    to_who = StringField()
+    p1_start_dt = DateTimeField(default=datetime.datetime.now)
+    p1_end_dt = DateTimeField(default=datetime.datetime.now)
+    p2_start_dt = DateTimeField(default=datetime.datetime.now)
+    p2_end_dt = DateTimeField(default=datetime.datetime.now)
+    p3_start_dt = DateTimeField(default=datetime.datetime.now) 
+    p3_end_dt = DateTimeField(default=datetime.datetime.now)
+    date_creation = DateTimeField(default=datetime.datetime.now)
 
-    required_fields = ['to_who','p1_start_dt','p1_end_dt','p2_start_dt','p2_end_dt','p3_start_dt','p3_end_dt']   
-    default_values = { 'date_creation':datetime.datetime.utcnow}
+class Category(Document)
+    catname = StringField()
+    catmark = StringField()
 
-@connection.register
-class Category(DjangoDocument):
-    __database__ = 'ves_dev'
-    __collection__ = 'categories'
-    structure = {
-        '_type':unicode,
-        'catname':unicode,
-        'catmark':int,
-    }
+class Subcategory(Document)
+    subcatname = StringField()
+    subcatmark = FloatField()
 
-    required_fields = ['catname','catmark']
-    default_values = {}
+class Klass(Document)
+    coursetype = StringField()
+    coursename = StringField()
 
-@connection.register
-class Subcategory(DjangoDocument):
-    __database__ = 'ves_dev'
-    __collection__ = 'subcategories'
-    structure = {
-        '_type':unicode,
-        'subcatname': unicode,
-        'subcatmark': int,
-    }
+class Level1(Document)
+    examination_passed = StringField()
+    yop = StringField()
+    total_mark = IntField()
+    percentage = FloatField()
+    rank = IntField()
+    date_creation = DateTimeField(default=datetime.datetime.now)
 
-    required_fields = ['subcatname','subcatmark']
-    default_values = {}
-
-@connection.register
-class Klass(DjangoDocument):
-    __database__ = 'ves_dev'
-    __collection__ = 'klasses'
-    structure = {
-        '_type':unicode,
-        'coursetype':unicode,
-        'coursename':unicode,
-    }
-
-    required_fields = ['coursetype','coursename']
-    default_values = {}
-
-@connection.register
-class Level1(DjangoDocument):
-    __database__ = 'ves_dev'
-    __collection__ = 'levels1'
-    structure = {
-        '_type':unicode,
-        'examination_passed': unicode,
-        'yop': datetime.datetime,
-        'total_mark':int,
-        'percentage':int,
-        'rank':int,
-        'date_creation':datetime.datetime,
-    }
-
-    required_fields = ['examination_passed','yop','total_mark','percentage','rank']
-    default_values = {'date_creation':datetime.datetime.utcnow}
-
-@connection.register
-class Level2(DjangoDocument):
-    __database__  = 'ves_dev'
-    __collection__ = 'levels2'
-    structure = {
-        '_type':unicode,
-        'selected_subcat': unicode,
-        'year':datetime.datetime,
-        'event':unicode,
-        'description':unicode,
-        'date_creation':datetime.datetime,
-    }
-
-    required_fields = ['selected_subcat','year','event','description']
-    default_values = {'date_creation':datetime.datetime.utcnow}
-
+class Level2(Document)
+    selected_subcat = StringField()
+    year = StringField()
+    event = StringField() 
+    description = StringField()
+    date_creation = DateTimeField(default=datetime.datetime.now)
+    
 class Level3(Document)
         selected_subcat = StringField()
         year = StringField()
