@@ -64,7 +64,7 @@ def algo_for_best():
 
 def create_csv(request):
 	if request.user.is_authenticated:
-		user_member_reg = connection.ves_dev.contestants_reg.UserMemberReg()
+		user_member_reg = UserMemberReg()
 
 	else:
 
@@ -72,14 +72,14 @@ def create_csv(request):
 
 def reduce_size_of_img(request):
 	if request.user.is_authenticated:
-		user_member_reg = connection.ves_dev.contestants_reg.UserMemberReg()
+		user_member_reg = UserMemberReg()
 	else:
 
 	return HttpResponse()
 
 def check_schedule(request):
 	if request.user.is_authenticated:
-		user_member_reg = connection.ves_dev.contestants_reg.UserMemberReg()
+		user_member_reg = UserMemberReg()
 
 	else:
 
