@@ -79,7 +79,7 @@ def reduce_size_of_img(request):
 
 def check_schedule(request):
 	if request.user.is_authenticated:
-		user_member_reg = UserMemberReg()
+		user_member_reg = 	UserMemberReg()
 
 	else:
 
@@ -87,7 +87,7 @@ def check_schedule(request):
 
 def retrive_imges(request):
 	if request.user.is_authenticated:
-		user_member_reg = connection.ves_dev.contestants_reg.UserMemberReg()
+		user_member_reg = UserMemberReg()
 
 	else:
 
@@ -102,7 +102,7 @@ def Make_csv(request):
 
 def retrive_csvs(request):
 	if request.user.is_authenticated:
-		user_member_reg = connection.ves_dev.contestants_reg.UserMemberReg()
+		user_member_reg = UserMemberReg()
 
 	else:
 
@@ -110,7 +110,7 @@ def retrive_csvs(request):
 
 def delete_csvs(request):
 	if request.user.is_authenticated:
-		user_member_reg = connection.ves_dev.contestants_reg.UserMemberReg()
+		user_member_reg = UserMemberReg()
 
 	else:
 
@@ -118,7 +118,7 @@ def delete_csvs(request):
 
 def check_document(request):
 	if request.user.is_authenticated:
-		user_member_reg = connection.ves_dev.contestants_reg.UserMemberReg()
+		user_member_reg = UserMemberReg()
 
 	else:
 
@@ -126,7 +126,7 @@ def check_document(request):
 
 def retrive_last_uploded(request):
 	if request.user.is_authenticated:
-		user_member_reg = connection.ves_dev.contestants_reg.UserMemberReg()
+		user_member_reg = UserMemberReg()
 
 	else:
 
