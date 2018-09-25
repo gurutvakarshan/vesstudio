@@ -134,7 +134,7 @@ def retrive_last_uploded(request):
 
 def retrive_selective_type(request):
 	if request.user.is_authenticated:
-		user_member_reg = connection.ves_dev.contestants_reg.UserMemberReg()
+		user_member_reg = UserMemberReg()
 
 	else:
 
@@ -142,14 +142,14 @@ def retrive_selective_type(request):
 
 def update_catergory_list(request):
 	if request.user.is_authenticated:
-		user_member_reg = connection.ves_dev.contestants_reg.UserMemberReg()
+		user_member_reg = UserMemberReg()
 	else:
 
 	return HttpResponse()
 
 def activity_on_dashboard():
 	if request.user.is_authenticated:
-		user_member_reg = connection.ves_dev.contestants_reg.UserMemberReg()
+		user_member_reg = UserMemberReg()
 
 	else:
 
@@ -157,14 +157,14 @@ def activity_on_dashboard():
 
 def all_notification(request):
 	if request.user.is_authenticated:
-		user_member_reg = connection.ves_dev.contestants_reg.UserMemberReg()
+		user_member_reg = UserMemberReg()
 	else:
 		
 	return HttpResponse()	
 
 def relation(request):
 	if request.user.is_authenticated:
-		user_member_reg = connection.ves_dev.contestants_reg.UserMemberReg()
+		user_member_reg = UserMemberReg()
 
 	else:
 
@@ -172,7 +172,7 @@ def relation(request):
 
 def cal_least_contestant(request):
 	if request.user.is_authenticated:
-		user_member_reg = connection.ves_dev.contestants_reg.UserMemberReg()
+		user_member_reg = UserMemberReg()
 	else:
 
 	return HttpResponse()
