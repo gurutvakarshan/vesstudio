@@ -179,14 +179,14 @@ def cal_least_contestant(request):
 
 def del_notification(request):
 	if request.user.is_authenticated:
-		user_member_reg = connection.ves_dev.contestants_reg.UserMemberReg()
+		user_member_reg = UserMemberReg()
 	else:
 
 	return HttpResponse()
 
 def del_schedule(request):
 	if request.user.is_authenticated:
-		user_member_reg = connection.ves_dev.contestants_reg.UserMemberReg()
+		user_member_reg = UserMemberReg()
 	else:
 
 	return HttpResponse()
@@ -200,7 +200,7 @@ def get_execution_time(request):
 
 def count_pages(request):
 	if request.user.is_authenticated:
-		user_member_reg = connection.ves_dev.contestants_reg.UserMemberReg()
+		user_member_reg = UserMemberReg()
 	else:
 
 	return HttpResponse()
@@ -221,14 +221,14 @@ def memcached_logic(request):
 
 def check_notification_status(request):
 	if request.user.is_authenticated:
-		user_member_reg = connection.ves_dev.contestants_reg.UserMemberReg()
+		user_member_reg = UserMemberReg()
 	else:
 
 	return HttpResponse()
 
 def online_chat(request):
 	if request.user.is_authenticated:
-		user_member_reg = connection.ves_dev.contestants_reg.UserMemberReg()
+		user_member_reg = UserMemberReg()
 	else:
 
 	return HttpResponse()
