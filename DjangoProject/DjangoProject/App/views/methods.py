@@ -242,7 +242,7 @@ def client_server(request):
 
 def trash(request):
 	if request.user.is_authenticated:
-		user_member_reg = connection.ves_dev.contestants_reg.UserMemberReg()
+		user_member_reg = UserMemberReg()
 	else:
 
 	return HttpResponse()
@@ -256,7 +256,7 @@ def zoom_inout(request):
 
 def news_feed(request):
 	if request.user.is_authenticated:
-		user_member_reg = connection.ves_dev.contestants_reg.UserMemberReg()
+		user_member_reg = UserMemberReg()
 	else:
 
 	return HttpResponse()
@@ -340,7 +340,7 @@ def internationalization(request):
 
 def user_session(request):
 	if request.user.is_authenticated:
-		user_member_reg = connection.ves_dev.contestants_reg.UserMemberReg()	
+		user_member_reg = UserMemberReg()	
 	else:
 	    
 	return HttpResponse()
@@ -382,7 +382,7 @@ def rabbitmq(request):
 
 def Mysql(request):
 	if request.user.is_authenticated:
-		user_member_reg = connection.ves_dev.contestants_reg.UserMemberReg()	
+		user_member_reg = UserMemberReg()	
 			
 	else:
 	    
@@ -390,7 +390,7 @@ def Mysql(request):
 
 def celery(request):
 	if request.user.is_authenticated:
-		user_member_reg = connection.ves_dev.contestants_reg.UserMemberReg()	
+		user_member_reg = UserMemberReg()	
 	else:
 	    
 	return HttpResponse()
@@ -404,7 +404,7 @@ def magic_method(request):
 
 def functiontool(request):
 	if request.user.is_authenticated:
-		user_member_reg = connection.ves_dev.contestants_reg.UserMemberReg()	
+		user_member_reg = UserMemberReg()	
 	else:
 	    
 	return HttpResponse()
@@ -424,7 +424,7 @@ def builtin2(request):
 
 def makepdf(request):
 	if request.user.is_authenticated:
-		user_member_reg = connection.ves_dev.contestants_reg.UserMemberReg()	
-	else:
+		user_member_reg = UserMemberReg()	
+	else
 	    
 	return HttpResponse()	
