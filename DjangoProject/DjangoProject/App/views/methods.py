@@ -7,14 +7,14 @@ from django.core.mail import EmailMessage
 
 def retrive(request):
 	if request.user.is_authenticated:
-		user_member_reg = UserMemberReg()					
+		for each in UserMemberReg.objects.all():					
 	else:
     
 	return HttpResponse()
 
 def display(request):
 	if request.user.is_authenticated:
-		user_member_reg = UserMemberReg()
+		for each in UserMemberReg.objects.all():
 	else:
     
 	return HttpResponse()
