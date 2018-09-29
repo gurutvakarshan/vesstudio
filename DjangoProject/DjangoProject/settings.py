@@ -77,7 +77,7 @@ DATABASES = {
     },
 }
 
-connect('system')
+connect('','18.223.166.67','27017')
 # Internationalization
 # https://docs.djangoproject.com/en/1.6/topics/i18n/
 
