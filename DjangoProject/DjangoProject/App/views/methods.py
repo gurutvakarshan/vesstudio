@@ -4,6 +4,7 @@ from django.template import loader
 from django.template import RequestContext
 from django.contrib.auth import authenticate, login,logout
 from django.core.mail import EmailMessage
+from DjangoProject.App.models import *
 
 def retrive(request):
 	if request.user.is_authenticated:
