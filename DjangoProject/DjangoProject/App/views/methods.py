@@ -22,14 +22,14 @@ def display(request):
 
 def edit(request):
 	if request.user.is_authenticated:
-		user_member_reg = UserMemberReg()
+		for each in UserMemberReg.objects.all():
 	else:
     
 	return HttpResponse()
 
 def delet(request):
 	if request.user.is_authenticated:
-		user_member_reg = UserMemberReg()
+		for each in UserMemberReg.objects.all():
 
 	else:
     
@@ -37,35 +37,35 @@ def delet(request):
 
 def each_activity(request):
 	if request.user.is_authenticated:
-		user_member_reg = UserMemberReg()		
+		for each in UserMemberReg.objects.all():
 	else:
     
 	return HttpResponse()
 
 def retrive_each_stramwise(request):
 	if request.user.is_authenticated:
-		user_member_reg = UserMemberReg()
+		for each in UserMemberReg.objects.all():
 	else:
     
 	return HttpResponse()
 
 def delete_each_streamwise(request):
 	if request.user.is_authenticated:
-		user_member_reg = UserMemberReg()
+		for each in UserMemberReg.objects.all():
 	else:
     
 	return HttpResponse()
 
 def algo_for_best():
 	if request.user.is_authenticated:
-		user_member_reg = UserMemberReg()
+		for each in UserMemberReg.objects.all():
 	else:
 
 	return HttpResponse()
 
 def create_csv(request):
 	if request.user.is_authenticated:
-		user_member_reg = UserMemberReg()
+		for each in UserMemberReg.objects.all():
 
 	else:
 
@@ -73,14 +73,14 @@ def create_csv(request):
 
 def reduce_size_of_img(request):
 	if request.user.is_authenticated:
-		user_member_reg = UserMemberReg()
+		for each in UserMemberReg.objects.all():
 	else:
 
 	return HttpResponse()
 
 def check_schedule(request):
 	if request.user.is_authenticated:
-		user_member_reg = 	UserMemberReg()
+		for each in UserMemberReg.objects.all():
 
 	else:
 
@@ -88,7 +88,7 @@ def check_schedule(request):
 
 def retrive_imges(request):
 	if request.user.is_authenticated:
-		user_member_reg = UserMemberReg()
+		for each in UserMemberReg.objects.all():
 
 	else:
 
