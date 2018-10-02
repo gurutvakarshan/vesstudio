@@ -103,7 +103,7 @@ def Make_csv(request):
 
 def retrive_csvs(request):
 	if request.user.is_authenticated:
-		user_member_reg = UserMemberReg()
+		for each in UserMemberReg.objects.all():
 
 	else:
 
@@ -111,7 +111,7 @@ def retrive_csvs(request):
 
 def delete_csvs(request):
 	if request.user.is_authenticated:
-		user_member_reg = UserMemberReg()
+		for each in UserMemberReg.objects.all():
 
 	else:
 
@@ -119,7 +119,7 @@ def delete_csvs(request):
 
 def check_document(request):
 	if request.user.is_authenticated:
-		user_member_reg = UserMemberReg()
+		for each in UserMemberReg.objects.all():
 
 	else:
 
@@ -127,7 +127,7 @@ def check_document(request):
 
 def retrive_last_uploded(request):
 	if request.user.is_authenticated:
-		user_member_reg = UserMemberReg()
+		for each in UserMemberReg.objects.all():
 
 	else:
 
@@ -135,7 +135,7 @@ def retrive_last_uploded(request):
 
 def retrive_selective_type(request):
 	if request.user.is_authenticated:
-		user_member_reg = UserMemberReg()
+		for each in UserMemberReg.objects.all():
 
 	else:
 
@@ -143,14 +143,14 @@ def retrive_selective_type(request):
 
 def update_catergory_list(request):
 	if request.user.is_authenticated:
-		user_member_reg = UserMemberReg()
+		for each in UserMemberReg.objects.all():
 	else:
 
 	return HttpResponse()
 
 def activity_on_dashboard():
 	if request.user.is_authenticated:
-		user_member_reg = UserMemberReg()
+		for each in UserMemberReg.objects.all():
 
 	else:
 
@@ -158,14 +158,14 @@ def activity_on_dashboard():
 
 def all_notification(request):
 	if request.user.is_authenticated:
-		user_member_reg = UserMemberReg()
+		for each in UserMemberReg.objects.all():
 	else:
 		
 	return HttpResponse()	
 
 def relation(request):
 	if request.user.is_authenticated:
-		user_member_reg = UserMemberReg()
+		for each in UserMemberReg.objects.all():
 
 	else:
 
@@ -173,21 +173,21 @@ def relation(request):
 
 def cal_least_contestant(request):
 	if request.user.is_authenticated:
-		user_member_reg = UserMemberReg()
+		for each in UserMemberReg.objects.all():
 	else:
 
 	return HttpResponse()
 
 def del_notification(request):
 	if request.user.is_authenticated:
-		user_member_reg = UserMemberReg()
+		for each in UserMemberReg.objects.all():
 	else:
 
 	return HttpResponse()
 
 def del_schedule(request):
 	if request.user.is_authenticated:
-		user_member_reg = UserMemberReg()
+		for each in UserMemberReg.objects.all():
 	else:
 
 	return HttpResponse()
@@ -201,7 +201,7 @@ def get_execution_time(request):
 
 def count_pages(request):
 	if request.user.is_authenticated:
-		user_member_reg = UserMemberReg()
+		for each in UserMemberReg.objects.all():
 	else:
 
 	return HttpResponse()
@@ -222,7 +222,7 @@ def memcached_logic(request):
 
 def check_notification_status(request):
 	if request.user.is_authenticated:
-		user_member_reg = UserMemberReg()
+		for each in UserMemberReg.objects.all():
 	else:
 
 	return HttpResponse()
