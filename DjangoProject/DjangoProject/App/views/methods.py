@@ -208,14 +208,14 @@ def count_pages(request):
 
 def count_max_hits(request):
 	if request.user.is_authenticated:
-
+		for each in UserMemberReg.objects.all():
 	else:
 
 	return HttpResponse()
 
 def memcached_logic(request):
 	if request.user.is_authenticated:
-
+		for each in UserMemberReg.objects.all():
 	else:
 
 	return HttpResponse()
@@ -229,7 +229,7 @@ def check_notification_status(request):
 
 def online_chat(request):
 	if request.user.is_authenticated:
-		user_member_reg = UserMemberReg()
+		for each in UserMemberReg.objects.all():
 	else:
 
 	return HttpResponse()
@@ -243,7 +243,7 @@ def client_server(request):
 
 def trash(request):
 	if request.user.is_authenticated:
-		user_member_reg = UserMemberReg()
+		for each in UserMemberReg.objects.all():
 	else:
 
 	return HttpResponse()
@@ -257,7 +257,7 @@ def zoom_inout(request):
 
 def news_feed(request):
 	if request.user.is_authenticated:
-		user_member_reg = UserMemberReg()
+		for each in UserMemberReg.objects.all():
 	else:
 
 	return HttpResponse()
@@ -348,7 +348,7 @@ def user_session(request):
 
 def user_cookies(request):
 	if request.user.is_authenticated:
-		user_member_reg = connection.ves_dev.contestants_	
+		for each in UserMemberReg.objects.all():	
 	else:
 	    
 	return HttpResponse()
@@ -383,7 +383,7 @@ def rabbitmq(request):
 
 def Mysql(request):
 	if request.user.is_authenticated:
-		user_member_reg = UserMemberReg()	
+		for each in UserMemberReg.objects.all():
 			
 	else:
 	    
@@ -391,7 +391,7 @@ def Mysql(request):
 
 def celery(request):
 	if request.user.is_authenticated:
-		user_member_reg = UserMemberReg()	
+		for each in UserMemberReg.objects.all():
 	else:
 	    
 	return HttpResponse()
@@ -405,7 +405,7 @@ def magic_method(request):
 
 def functiontool(request):
 	if request.user.is_authenticated:
-		user_member_reg = UserMemberReg()	
+		for each in UserMemberReg.objects.all():	
 	else:
 	    
 	return HttpResponse()
@@ -425,7 +425,7 @@ def builtin2(request):
 
 def makepdf(request):
 	if request.user.is_authenticated:
-		user_member_reg = UserMemberReg()	
+		for each in UserMemberReg.objects.all():	
 	else
 	    
 	return HttpResponse()	
