@@ -8,7 +8,8 @@ from DjangoProject.App.models import *
 
 def retrive(request):
 	if request.user.is_authenticated:
-		for each in UserMemberReg.objects.all():					
+		for each in UserMemberReg.objects.all():
+			print each.to_json()					
 	else:
     
 	return HttpResponse()
@@ -16,6 +17,7 @@ def retrive(request):
 def display(request):
 	if request.user.is_authenticated:
 		for each in UserMemberReg.objects.all():
+			print each.to_json()
 	else:
     
 	return HttpResponse()
@@ -23,6 +25,7 @@ def display(request):
 def edit(request):
 	if request.user.is_authenticated:
 		for each in UserMemberReg.objects.all():
+			print each.to_json()
 	else:
     
 	return HttpResponse()
@@ -30,7 +33,7 @@ def edit(request):
 def delet(request):
 	if request.user.is_authenticated:
 		for each in UserMemberReg.objects.all():
-
+			print each.to_json()
 	else:
     
 	return HttpResponse()
@@ -38,6 +41,7 @@ def delet(request):
 def each_activity(request):
 	if request.user.is_authenticated:
 		for each in UserMemberReg.objects.all():
+			print each.to_json()
 	else:
     
 	return HttpResponse()
@@ -45,6 +49,7 @@ def each_activity(request):
 def retrive_each_stramwise(request):
 	if request.user.is_authenticated:
 		for each in UserMemberReg.objects.all():
+			print each.to_json()
 	else:
     
 	return HttpResponse()
@@ -52,6 +57,7 @@ def retrive_each_stramwise(request):
 def delete_each_streamwise(request):
 	if request.user.is_authenticated:
 		for each in UserMemberReg.objects.all():
+			print each.to_json()
 	else:
     
 	return HttpResponse()
@@ -59,6 +65,7 @@ def delete_each_streamwise(request):
 def algo_for_best():
 	if request.user.is_authenticated:
 		for each in UserMemberReg.objects.all():
+			print each.to_json()
 	else:
 
 	return HttpResponse()
@@ -66,7 +73,7 @@ def algo_for_best():
 def create_csv(request):
 	if request.user.is_authenticated:
 		for each in UserMemberReg.objects.all():
-
+			print each.to_json()
 	else:
 
 	return HttpResponse()
@@ -74,6 +81,7 @@ def create_csv(request):
 def reduce_size_of_img(request):
 	if request.user.is_authenticated:
 		for each in UserMemberReg.objects.all():
+			print each.to_json()
 	else:
 
 	return HttpResponse()
