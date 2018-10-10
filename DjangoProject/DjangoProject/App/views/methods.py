@@ -89,7 +89,7 @@ def reduce_size_of_img(request):
 def check_schedule(request):
 	if request.user.is_authenticated:
 		for each in UserMemberReg.objects.all():
-
+			print each.to_json()
 	else:
 
 	return HttpResponse()
@@ -97,7 +97,7 @@ def check_schedule(request):
 def retrive_imges(request):
 	if request.user.is_authenticated:
 		for each in UserMemberReg.objects.all():
-
+			print each.to_json()
 	else:
 
 	return HttpResponse()
@@ -112,7 +112,7 @@ def Make_csv(request):
 def retrive_csvs(request):
 	if request.user.is_authenticated:
 		for each in UserMemberReg.objects.all():
-
+			print each.to_json()
 	else:
 
 	return HttpResponse()
@@ -120,7 +120,7 @@ def retrive_csvs(request):
 def delete_csvs(request):
 	if request.user.is_authenticated:
 		for each in UserMemberReg.objects.all():
-
+			print each.to_json()
 	else:
 
 	return HttpResponse()	
@@ -128,7 +128,7 @@ def delete_csvs(request):
 def check_document(request):
 	if request.user.is_authenticated:
 		for each in UserMemberReg.objects.all():
-
+			print each.to_json()
 	else:
 
 	return HttpResponse()	
@@ -136,7 +136,7 @@ def check_document(request):
 def retrive_last_uploded(request):
 	if request.user.is_authenticated:
 		for each in UserMemberReg.objects.all():
-
+			print each.to_json()
 	else:
 
 	return HttpResponse()
@@ -144,7 +144,7 @@ def retrive_last_uploded(request):
 def retrive_selective_type(request):
 	if request.user.is_authenticated:
 		for each in UserMemberReg.objects.all():
-
+			print each.to_json()
 	else:
 
 	return HttpResponse()
@@ -159,7 +159,7 @@ def update_catergory_list(request):
 def activity_on_dashboard():
 	if request.user.is_authenticated:
 		for each in UserMemberReg.objects.all():
-
+			print each.to_json()
 	else:
 
 	return HttpResponse()	
@@ -167,6 +167,7 @@ def activity_on_dashboard():
 def all_notification(request):
 	if request.user.is_authenticated:
 		for each in UserMemberReg.objects.all():
+			print each.to_json()
 	else:
 		
 	return HttpResponse()	
