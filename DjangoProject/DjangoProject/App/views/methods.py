@@ -175,7 +175,7 @@ def all_notification(request):
 def relation(request):
 	if request.user.is_authenticated:
 		for each in UserMemberReg.objects.all():
-
+			print each.to_json()
 	else:
 
 	return HttpResponse()	
@@ -183,13 +183,15 @@ def relation(request):
 def cal_least_contestant(request):
 	if request.user.is_authenticated:
 		for each in UserMemberReg.objects.all():
+			print each.to_json()
 	else:
 
 	return HttpResponse()
 
 def del_notification(request):
 	if request.user.is_authenticated:
-		for each in UserMemberReg.objects.all():
+		for each in UserMemberReg.objects.all():\
+			print each.to_json()
 	else:
 
 	return HttpResponse()
@@ -197,6 +199,7 @@ def del_notification(request):
 def del_schedule(request):
 	if request.user.is_authenticated:
 		for each in UserMemberReg.objects.all():
+			print each.to_json()
 	else:
 
 	return HttpResponse()
@@ -211,6 +214,7 @@ def get_execution_time(request):
 def count_pages(request):
 	if request.user.is_authenticated:
 		for each in UserMemberReg.objects.all():
+			print each.to_json()
 	else:
 
 	return HttpResponse()
@@ -218,6 +222,7 @@ def count_pages(request):
 def count_max_hits(request):
 	if request.user.is_authenticated:
 		for each in UserMemberReg.objects.all():
+			print each.to_json()
 	else:
 
 	return HttpResponse()
@@ -225,6 +230,7 @@ def count_max_hits(request):
 def memcached_logic(request):
 	if request.user.is_authenticated:
 		for each in UserMemberReg.objects.all():
+			print each.to_json()
 	else:
 
 	return HttpResponse()
@@ -232,6 +238,7 @@ def memcached_logic(request):
 def check_notification_status(request):
 	if request.user.is_authenticated:
 		for each in UserMemberReg.objects.all():
+			print each.to_json()
 	else:
 
 	return HttpResponse()
@@ -239,6 +246,7 @@ def check_notification_status(request):
 def online_chat(request):
 	if request.user.is_authenticated:
 		for each in UserMemberReg.objects.all():
+			print each.to_json()
 	else:
 
 	return HttpResponse()
@@ -253,6 +261,7 @@ def client_server(request):
 def trash(request):
 	if request.user.is_authenticated:
 		for each in UserMemberReg.objects.all():
+			print each.to_json()
 	else:
 
 	return HttpResponse()
@@ -267,6 +276,7 @@ def zoom_inout(request):
 def news_feed(request):
 	if request.user.is_authenticated:
 		for each in UserMemberReg.objects.all():
+			print each.to_json()
 	else:
 
 	return HttpResponse()
@@ -357,7 +367,8 @@ def user_session(request):
 
 def user_cookies(request):
 	if request.user.is_authenticated:
-		for each in UserMemberReg.objects.all():	
+		for each in UserMemberReg.objects.all():
+			print each.to_json()	
 	else:
 	    
 	return HttpResponse()
@@ -393,7 +404,7 @@ def rabbitmq(request):
 def Mysql(request):
 	if request.user.is_authenticated:
 		for each in UserMemberReg.objects.all():
-			
+			print each.to_json()
 	else:
 	    
 	return HttpResponse()
@@ -401,6 +412,7 @@ def Mysql(request):
 def celery(request):
 	if request.user.is_authenticated:
 		for each in UserMemberReg.objects.all():
+			print each.to_json()
 	else:
 	    
 	return HttpResponse()
@@ -415,6 +427,7 @@ def magic_method(request):
 def functiontool(request):
 	if request.user.is_authenticated:
 		for each in UserMemberReg.objects.all():	
+			print each.to_json()
 	else:
 	    
 	return HttpResponse()
@@ -434,7 +447,8 @@ def builtin2(request):
 
 def makepdf(request):
 	if request.user.is_authenticated:
-		for each in UserMemberReg.objects.all():	
+		for each in UserMemberReg.objects.all():
+			print each.to_json()	
 	else
 	    
 	return HttpResponse()	
