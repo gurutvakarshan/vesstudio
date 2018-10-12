@@ -382,14 +382,16 @@ def wrapperfun(request):
 
 def decorator(request):
 	if request.user.is_authenticated:
-			
+		for each in UserMemberReg.objects.all():
+			print each.to_json()		
 	else:
 	    
 	return HttpResponse()
 
 def anotation(request):
 	if request.user.is_authenticated:
-			
+		for each in UserMemberReg.objects.all():
+			print each.to_json()			
 	else:
 	    
 	return HttpResponse()
