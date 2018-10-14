@@ -104,7 +104,8 @@ def retrive_imges(request):
 
 def Make_csv(request):
 	if request.user.is_authenticated:
-
+		for each in UserMemberReg.objects.all():
+			print each.to_json()
 	else:
 
 	return HttpResponse()
@@ -152,6 +153,7 @@ def retrive_selective_type(request):
 def update_catergory_list(request):
 	if request.user.is_authenticated:
 		for each in UserMemberReg.objects.all():
+			print each.to_json()
 	else:
 
 	return HttpResponse()
