@@ -208,7 +208,8 @@ def del_schedule(request):
 
 def get_execution_time(request):
 	if request.user.is_authenticated:
-		
+		for each in UserMemberReg.objects.all():
+			print each.to_json()
 	else:
 
 	return HttpResponse()
